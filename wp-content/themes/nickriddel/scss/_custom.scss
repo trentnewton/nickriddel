@@ -288,6 +288,7 @@ h4,
 h5,
 h6 {
 	text-transform: lowercase;
+	margin-top: 0;
 }
 
 .subheader,
@@ -397,9 +398,11 @@ table {
 		width: 4px;
 		float: left;
 		@include animation(loading-rect 0.6s infinite ease-in-out);
-	}
-	.rect ~ .rect {
-		margin-left: 4px;
+			~ {
+				.rect {
+					margin-left: 4px;
+				}
+			}
 	}
 	.rect1 {
 		@include animation-delay(-0.3s)
