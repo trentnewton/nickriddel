@@ -1,0 +1,633 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"te",
+				"text-bg"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"fadeIn",
+				"fadeInDown"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"bcg",
+				"bcg-overlay"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"botto",
+				"bottom-footer"
+			],
+			[
+				"se",
+				"secondary-color"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"a",
+				"active"
+			],
+			[
+				"no",
+				"normal"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"su",
+				"success-color"
+			],
+			[
+				"gl",
+				"global-radius"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"for",
+				"forwards"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"icon-",
+				"icon-spin"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"al",
+				"alert-color"
+			],
+			[
+				"pri",
+				"primary-color"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"pr",
+				"product-display"
+			],
+			[
+				"contact",
+				"contact-form"
+			],
+			[
+				"cont",
+				"contactform"
+			],
+			[
+				"wing",
+				"wing-r"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"an",
+				"animation"
+			],
+			[
+				"rem",
+				"rem-calc"
+			],
+			[
+				"pl",
+				"placeholder"
+			],
+			[
+				"S",
+				"section"
+			],
+			[
+				"p",
+				"php"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"Package Control: in	",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"pa",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 489.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/gratia/.gitignore",
+		"/Applications/MAMP/htdocs/kbcyouth/.gitignore",
+		"/Applications/MAMP/htdocs/kbcyouth/maintenance.htaccess",
+		"/Applications/MAMP/htdocs/gratia/final.htaccess",
+		"/Applications/MAMP/htdocs/kbcyouth2/.htaccess",
+		"/Applications/MAMP/htdocs/gratia/.htaccess",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/bower_components/foundation/scss/foundation/components/_thumbs.scss",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia.old/scss/app.scss",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/gratia.sublime-project",
+		"/Applications/MAMP/htdocs/gratia/index.html",
+		"/Applications/MAMP/htdocs/gratia/hello!.html",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/style.css",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/scss/_custom.scss",
+		"/Applications/MAMP/htdocs/gratia/wp-content/plugins/clearing-gallery/class.prso-foundation-5-clearing-gallery.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/theme-support.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/cleanup.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/plugins/contact-form-7/wp-contact-form-7.php",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/scss/app.scss",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/scss/_settings.scss",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia.old/scss/icons.scss",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/enqueue-stylesheets.php",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/scss/_settings.scss",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/scss/_woocommerce.scss",
+		"/Applications/MAMP/htdocs/nickriddel/.htaccess",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/functions.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/foundation.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/enqueue-scripts.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia.old/js/custom.js",
+		"/Applications/MAMP/htdocs/gratia/wp-content/plugins/contact-form-7/includes/js/jquery.form.js",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/offcanvas-walker.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/navigation.php",
+		"/Users/trentnewton/Downloads/FoundationPress-master/library/custom-header.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia/library/entry-meta.php",
+		"/Applications/MAMP/htdocs/gratia/wp-content/themes/gratia.old/social.png",
+		"/Users/trentnewton/Downloads/trtr1746_kbcyouth-2.sql",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/stylesheets/app.css",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/library/enqueue-scripts.php",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/library/enqueue-stylesheets.php",
+		"/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel/header.php",
+		"/Applications/MAMP/htdocs/paulakernphoto/wp-content/themes/prophoto4/functions.php",
+		"/Users/trentnewton/.filezilla/sitemanager.xml",
+		"/Applications/MAMP/htdocs/kbcyouth2/final.htaccess",
+		"/Applications/MAMP/htdocs/gratia/old.htaccess",
+		"/Applications/MAMP/htdocs/paulakernphoto/wp-content/themes/prophoto4/social.png",
+		"/Applications/MAMP/htdocs/paulakernphoto/wp-content/themes/prophoto4/admin.php",
+		"/Applications/MAMP/htdocs/kbc/untitled.html",
+		"/Users/trentnewton/Documents/ProPresenter5/This is Jesus.pro5",
+		"/Applications/MAMP/htdocs/nickriddelwordpress/wp-content/themes/nickriddel/scss/_custom.scss",
+		"/Applications/MAMP/htdocs/nickriddelwordpress/wp-content/themes/nickriddel/header.php",
+		"/Applications/MAMP/htdocs/nickriddelwordpress/wp-content/themes/nickriddel/footer.php",
+		"/Applications/MAMP/htdocs/nickriddelwordpress/wp-content/themes/nickriddel/js/app.js",
+		"/Applications/MAMP/htdocs/nickriddel/.gitignore",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_login/tmpl/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/bower_components/foundation/scss/foundation/components/_alert-boxes.scss",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/bower_components/foundation/scss/foundation/components/_reveal.scss",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/helpers/cart.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/com_virtuemart/cart/padded.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/views/cart/view.html.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_virtuemart_cart/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/views/cart/tmpl/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/views/cart/view.json.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/com_virtuemart/productdetails/default_showprices.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/scss/_facebox.scss",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_login/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_login/default_logout.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/helpers/shopfunctionsf.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/controllers/cart.php",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/scss/_pages.scss",
+		"/Applications/MAMP/htdocs/kbcyouth/site-down.htaccess",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/scss/_variables.scss",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/js/vendor/vmprices.js",
+		"/Applications/MAMP/htdocs/nickriddelwordpress/wp-content/themes/nickriddel/woocommerce/content-single-product.php",
+		"/Applications/MAMP/htdocs/kbcyouth/final.wp-config.php",
+		"/Applications/MAMP/htdocs/trentnewton/testconnection.php",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/scss/_mixins.scss",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/scss/_base.scss",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/scss/_webfonts.scss",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/scss/app.scss",
+		"/Applications/MAMP/htdocs/kbcyouth/final.htaccess",
+		"/Applications/MAMP/htdocs/kbcyouth/maintenance.html",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-config.php",
+		"/Applications/MAMP/htdocs/kbcyouth/index.html",
+		"/Applications/MAMP/htdocs/kbcyouth/sitedown.htacess",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/scss/_pagehero.scss",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/library/enqueue-stylesheets.php",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/library/enqueue-scripts.php",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/footer.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/js/vendor/dynupdate.js",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/js/vendor/update_cart.js",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/js/vendor/vmkeepalive.js",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_content/views/archive/tmpl/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/joomberui/html/com_virtuemart/categoryz/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_virtuemart_cart/mod_virtuemart_cart.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_virtuemart_cart/tmpl/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/framework.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/views/productdetails/view.html.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/components/com_virtuemart/views/category/view.html.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/com_virtuemart/category/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_login/default_old.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_custom/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/templateDetails.xml",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_title/tmpl/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_title/mod_title.xml",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_custom_title/mod_custom_title.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_custom_title/tmpl/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_title/mod_title.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_custom_title/mod_custom_title.xml",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/joomberui/index.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_title/tmpl/index.html",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_title/index.html",
+		"/Applications/MAMP/htdocs/trucleanbeta/modules/mod_title/helper.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_title/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/modules.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/layouts/joomla/system/message.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/administrator/templates/isis/html/layouts/joomla/system/message.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/libraries/joomla/document/html/renderer/message.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_openglobal_virtuemart_categories/mod_openglobal_virtuemart_categories.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_breadcrumbs/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/error.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/stylesheets/app.css",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/joomberui/css/app.css",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_openglobal_virtuemart_categories/printcategories.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/com_virtuemart/productdetails/default_addtocart.php",
+		"/Applications/MAMP/htdocs/kbcyouth/wp-content/themes/kbcyouth/js/custom.js",
+		"/Applications/MAMP/htdocs/trucleanbeta/templates/truclean/html/mod_openglobal_virtuemart_categories/default.php",
+		"/Applications/MAMP/htdocs/trucleanbeta/untitled.html",
+		"/Applications/MAMP/htdocs/trucleanbeta/untitled2.html",
+		"/Applications/MAMP/htdocs/trucleanbeta/configuration.php"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"alive",
+			"ajax",
+			"loader",
+			"-webki",
+			"pricing",
+			"gainsboro",
+			"pricing tab",
+			"animated",
+			"fadeInUp",
+			"line-height",
+			"clearin",
+			"class",
+			"attachm",
+			"$lightness: 6",
+			"$lightness: 65",
+			"$lightness: 6",
+			"$lightness: 65%",
+			"e2e2e2",
+			"22. Pricing Tables",
+			"05. Buttons",
+			"408",
+			"#",
+			"e2",
+			"e2e2e2",
+			"margin",
+			"3c",
+			"rem-calc(15",
+			"e. Typography",
+			"e2e2e2",
+			"#a3cce1",
+			"#b",
+			"a:hover",
+			"efef",
+			"current-menu-item",
+			"upper",
+			"trans",
+			"$oil",
+			"34. Top Bar",
+			"font",
+			"ordered",
+			"button",
+			"11. forms",
+			"#{$assetPath}/img/",
+			"#{$assetPath}/img",
+			"../",
+			"#575757",
+			"jet",
+			"#2e6480",
+			"scale-color",
+			"#desktop-nav",
+			"link",
+			"AvenirLTStd",
+			"bread",
+			"#fff",
+			"#489ac5",
+			"3c3c3c",
+			"85858",
+			"#adadad",
+			"#4799c4",
+			"gratia  ",
+			"jquery-ui",
+			"foundationpress",
+			"htt",
+			"social",
+			"4.1",
+			"version",
+			"h1,h2,h3,h4,h5,h6",
+			"margin-top:0",
+			"h2",
+			"banner_txt",
+			"{",
+			";",
+			"boot",
+			"/Applications/MAMP/htdocs/nickriddel/",
+			"content",
+			"cartEffect",
+			"addtocart_popup",
+			"page",
+			"&view=cart",
+			"view",
+			"cart.find",
+			"h4",
+			"addJS",
+			"fancy",
+			"serialize",
+			"&view=cart",
+			"index.php",
+			"cartEffect",
+			"sendtocart",
+			"sendtocart(cart)",
+			"fn.product",
+			"addtocart",
+			"function(datas, textStatus)",
+			"alert",
+			"h4",
+			"getAddToCartButton",
+			"cartEffect",
+			"style",
+			"reveal-close",
+			"close-reveal-modal",
+			"global",
+			"continue_link",
+			"html",
+			".html",
+			"top",
+			".js",
+			"<script",
+			"show",
+			"cart",
+			"product",
+			"Products",
+			"products",
+			"settitle",
+			"title",
+			"login-greeting",
+			"h2",
+			"02. Alert Boxes",
+			"related",
+			"ver",
+			"horizontal-separator",
+			"inline",
+			"label",
+			"code",
+			"addtocart-button",
+			":",
+			"@media",
+			"breadcr",
+			"<script"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"color: scale-color($primary-color, $saturation: -5%, $lightness: 48%)",
+			"#{$assetPath}/",
+			"$header-font-color",
+			"$anchor-font-color-hover",
+			"$white",
+			"$primary-color",
+			"$secondary-color",
+			"$primary-color",
+			"Gratia",
+			"gratia",
+			"Gratia",
+			"Gratia  ",
+			"gratia  ",
+			"Gratia  ",
+			"gratia  ",
+			"{\n         ",
+			";\n         ",
+			"",
+			"scale-color($tertiary-color, $lightness: 70%)",
+			"scale-color($secondary-color, $saturation: -20%, $lightness: 50%)",
+			"$tertiary-color",
+			"$white",
+			"",
+			"truclean",
+			"rem-calc(14)",
+			"$monsoon",
+			"$white",
+			"$primary-color",
+			"$$primary-color",
+			"$alert-color",
+			"contactform",
+			"cleanansimple",
+			"cscf",
+			"cf",
+			"contactform",
+			"CF",
+			"cf",
+			"CF",
+			"cf",
+			"CF",
+			"cf",
+			"CF",
+			"cf",
+			"CF",
+			"cf",
+			"nickriddel",
+			"fonts",
+			"",
+			"height=\"220\" width=\"220\"",
+			"height=\"220\" width=\"20\"",
+			"clearing",
+			"cleaing",
+			"height=\"546\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
