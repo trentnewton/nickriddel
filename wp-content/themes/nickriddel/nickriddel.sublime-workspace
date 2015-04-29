@@ -175,6 +175,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Applications/MAMP/htdocs/nickriddel/wp-content/plugins/woocommerce/templates/cart/cart.php",
+			"settings":
+			{
+				"buffer_size": 5284,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "woocommerce/cart/cart.php",
+			"settings":
+			{
+				"buffer_size": 5207,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -567,8 +583,65 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Applications/MAMP/htdocs/nickriddel/wp-content/plugins/woocommerce/templates/cart/cart.php",
+					"settings":
+					{
+						"buffer_size": 5284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5140,
+								5234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1587.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "woocommerce/cart/cart.php",
+					"settings":
+					{
+						"buffer_size": 5207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5134,
+								5134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1377.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
