@@ -1,122 +1,5 @@
-@mixin animation($animation) {
-	-webkit-animation: $animation;
-	-moz-animation: $animation;
-	-ms-animation: $animation;
-	-o-animation: $animation;
-	animation: $animation; 
-}
-
-@mixin animation-delay($animation-delay) {
-	-webkit-animation-delay: $animation-delay;
-	-moz-animation-delay: $animation-delay;
-	-ms-animation-delay: $animation-delay;
-	-o-animation-delay: $animation-delay;
-	animation-delay: $animation-delay; 
-}
-
-@mixin animation-duration($duration) {
-	-webkit-animation-duration: $duration;
-	-moz-animation-duration: $duration;
-	-ms-animation-duration: $duration;
-	-o-animation-duration: $duration;
-	animation-duration: $duration; 
-}
-
-@mixin animation-iteration-count($count) {
-	-webkit-animation-iteration-count: $count;
-	-moz-animation-iteration-count: $count;
-	-o-animation-iteration-count: $count;
-	-ms-animation-iteration-count: $count;
-	animation-iteration-count: $count;
-}
-
-@mixin transform($transform) {
-	-o-transform: $transform;
-	-moz-transform: $transform;
-	-ms-transform: $transform; /* IE 9 */
-	-webkit-transform: $transform; /* Chrome, Safari, Opera */
-	transform: $transform;
-}
-
-@mixin transition-duration($duration) {
-	-o-transition-duration: $duration;
-	-moz-transition-duration: $duration;
-	-ms-transition-duration: $duration; /* IE 9 */
-	-webkit-transition-duration: $duration; /* Chrome, Safari, Opera */
-	transition-duration: $duration;
-}
-
-@mixin transition-property($property) {
-	-o-transition-property: $property;
-	-moz-transition-property: $property;
-	-ms-transition-property: $property; /* IE 9 */
-	-webkit-transition-property: $property; /* Chrome, Safari, Opera */
-	transition-property: $property;
-}
-
-@mixin animation-name($name) {
-	-o-animation-name: $name;
-	-moz-animation-name: $name;
-	-ms-animation-name: $name; /* IE 9 */
-	-webkit-animation-name: $name; /* Chrome, Safari, Opera */
-	animation-name: $name;
-}
-
-@mixin transition-timing-function($timing-function) {
-	-o-transition-timing-function: $timing-function;
-	-moz-transition-timing-function: $timing-function;
-	-ms-transition-timing-function: $timing-function; /* IE 9 */
-	-webkit-transition-timing-function: $timing-function; /* Chrome, Safari, Opera */
-	transition-timing-function: $timing-function;
-}
-
-@mixin animation-fill-mode($fill-mode) {
-	-o-animation-fill-mode: $fill-mode;
-	-moz-animation-fill-mode: $fill-mode;
-	-ms-animation-fill-mode: $fill-mode; /* IE 9 */
-	-webkit-animation-fill-mode: $fill-mode; /* Chrome, Safari, Opera */
-	animation-fill-mode: $fill-mode;
-}
-
-@mixin animation-timing-function($timing-function) {
-	-o-animation-timing-function: $timing-function;
-	-moz-animation-timing-function: $timing-function;
-	-ms-animation-timing-function: $timing-function; /* IE 9 */
-	-webkit-animation-timing-function: $timing-function; /* Chrome, Safari, Opera */
-	animation-timing-function: $timing-function;
-}
-
-
-@mixin keyframes($name) {
-	@-webkit-keyframes #{$name} {
-    	@content; 
-	}
-	@-moz-keyframes #{$name} {
-		@content;
-	}
-	@-ms-keyframes #{$name} {
-		@content;
-	}
-	@keyframes #{$name} {
-		@content;
-	} 
-}
-
-@-moz-keyframes spin {
-	100% {
-		-moz-transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes spin {
-	100% {
-		-webkit-transform: rotate(360deg);
-	}
-}
-
 @keyframes spin {
 	100% {
-		-webkit-transform: rotate(360deg);
 		transform:rotate(360deg);
 	}
 }
@@ -268,11 +151,6 @@ textarea {
 	color: $white;
 }
 
-::-moz-selection {
-	background: $input-border-color;
-	color: $white;
-}
-
 .hidden {
 	opacity: 0;
 }
@@ -334,11 +212,11 @@ footer {
 }
 
 .loop {
-	@include animation-iteration-count(infinite);
+	animation-iteration-count: infinite;
 }
 
 .slow {
-	@include animation-duration(4s);
+	animation-duration: 4s;
 }
 
 .content {
@@ -379,7 +257,7 @@ table {
     width: 100%;
   	text-align: center;
   	vertical-align: middle;
-    @include transform(scale(3,3));
+    transform: scale(3,3);
     z-index: 9999;
 }
 
@@ -397,7 +275,7 @@ table {
 		height: 100%;
 		width: 4px;
 		float: left;
-		@include animation(loading-rect 0.6s infinite ease-in-out);
+		animation: loading-rect 0.6s infinite ease-in-out;
 			~ {
 				.rect {
 					margin-left: 4px;
@@ -405,24 +283,24 @@ table {
 			}
 	}
 	.rect1 {
-		@include animation-delay(-0.3s)
+		animation-delay: -0.3s;
 	}
 	.rect2 {
-		@include animation-delay(-0.2s)
+		animation-delay: -0.2s;
 	}
 	.rect3 {
-		@include animation-delay(-0.1s)
+		animation-delay: -0.1s;
 	}
 }
 
-@include keyframes(loading-rect) {
+@keyframes loading-rect {
 	0%,
 	100% {
-		@include transform(scaleY(0.2));
+		transform: scaleY(0.2);
 		opacity: 0.2;
 	} 
 	50% {
-		@include transform(scaleY(1.0));
+		transform: scaleY(1.0);
 		opacity: 1;
 	};
 }
@@ -493,9 +371,13 @@ a[class=wc-backward] {
 
 #intro {
 	height: 100vh;
-	background: linear-gradient(rgba($tertiary-color, 0.15), rgba($tertiary-color, 0.15)),
-				url(#{$assetPath}/intro-bg.jpg) 80% 50% no-repeat,
-				url(#{$assetPath}/main-bg.jpg);
+	background:
+		linear-gradient(
+			rgba($tertiary-color, 0.15),
+			rgba($tertiary-color, 0.15)
+		),
+		url(#{$assetPath}/intro-bg.jpg) 80% 50% no-repeat,
+		url(#{$assetPath}/main-bg.jpg);
 	background-size: cover;
 }
 
@@ -570,9 +452,8 @@ a[class=wc-backward] {
 .drop {
 	display: inline-block;
 	vertical-align: middle;
-	@include transform(translateZ(0));
+	transform: translateZ(0);
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	position: relative;
 	padding-left: 2em;
@@ -590,15 +471,15 @@ a[class=wc-backward] {
 .spin {
 	  	&:before {
 	  		content: "\e601";
-	  		@include transition-duration(1s);
-	  		@include transition-property(transform);
-	  		@include transition-timing-function(ease-in-out);
+	  		transition-duration: 1s;
+	  		transition-property: transform;
+	  		transition-timing-function: ease-in-out;
 	  	}
 	  	&:hover,
 	  	&:focus,
 	  	&:active {
 	  		&:before {
-	  			@include transform(rotate(720deg));
+	  			transform: rotate(720deg);
 	  		}
 	  	}
 }
@@ -609,34 +490,34 @@ a[class=wc-backward] {
 		&:before {
 			content: "\e600";
 			opacity: 1;
-			@include transform(translateZ(0));
+			transform: translateZ(0);
 		}
 		&:hover,
 	  	&:focus,
 	  	&:active {
 	  		&:before {
 	  			opacity: 0;
-	  			@include transition-duration(0.3s);
-	  			@include animation-name(drop);
-				@include animation-duration(0.5s);
-				@include animation-delay(0.3s);
-				@include animation-fill-mode(forwards);
-				@include animation-timing-function(ease-in-out);
-				@include animation-timing-function(cubic-bezier(0.52, 1.64, 0.37, 0.66));
+	  			transition-duration: 0.3s;
+	  			animation-name: drop;
+				animation-duration: 0.5s;
+				animation-delay: 0.3s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in-out;
+				animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 	  		}
 	  	}
 }
 
 /* icon drop */
 
-@include keyframes(drop) {
+@keyframes drop {
 	0% {
 		opacity: 0;
 	}
 
 	50% {
 		opacity: 0;
-		@include transform(translateY(-100%));
+		transform: translateY(-100%);
 	}
 
 	51%,
@@ -662,26 +543,26 @@ a[class=wc-backward] {
 }
 
 .fly {
-	@include animation(fly 17.5s infinite linear);
+	animation: fly 17.5s infinite linear;
 }
 
 #bird1 {
-	@include transform(scale(0.2,0.2));
+	transform: scale(0.2,0.2);
 		@media #{$small-only} {
-			@include transform(scale(0.1,0.1));
+			transform: scale(0.1,0.1);
 		}
 }
 
 #bird2 {
-	@include transform(scale(0.4,0.4));
+	transform: scale(0.4,0.4);
 		@media #{$small-only} {
-			@include transform(scale(0.2,0.2));
+			transform: scale(0.2,0.2);
 		}
 }
 
 .bird { 
 	position: absolute;
-	@include animation(bob 0.7s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4));
+	animation: bob 0.7s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4);
 	div {
 		position: absolute;
 	}
@@ -691,8 +572,8 @@ a[class=wc-backward] {
 .head,
 .wing-l,
 .wing-r {
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
     border-color: transparent;
     border-style: solid;
 }
@@ -728,44 +609,51 @@ a[class=wc-backward] {
 	bottom: 0; 
 	border-top-width: 0;
 	border-bottom-color: $oil;
-	@include animation(flap-l 0.7s infinite);
+	animation: flap-l 0.7s infinite;
 }
 
 .wing-r {
   	top: 0;
   	border-bottom-width:0px;
   	border-top-color: $steel;
-  	@include animation(flap-r 0.7s infinite);
+  	animation: flap-r 0.7s infinite;
 }
 
-@include keyframes(flap-r) {
-	0%,10%,100% {
+@keyframes flap-r {
+	0%,
+	10%,
+	100% {
 		border-top-width: 60px;
 	}
-	40%,60% {
+	40%,
+	60% {
 		border-top-width: 10px;
 	}
 }
 
-@include keyframes(flap-l) {
-	0%,100% {
+@keyframes flap-l {
+	0%,
+	100% {
 		border-bottom-width: 0px;
 	}
-	40%,60% { border-bottom-width: 40px;
+	40%,
+	60% { border-bottom-width: 40px;
 	}
 }
 
-@include keyframes(fly) {
+@keyframes fly {
 	0% {
 		left: 100%;
 	}
-	30%,100% {
+	30%,
+	100% {
 		left: -20%;
 	}
 }
 
-@include keyframes(bob) {
-	0%,100% { 
+@keyframes bob {
+	0%,
+	100% { 
 		top: 25px;
 	}
 	50% {
@@ -823,28 +711,18 @@ div {
 		background-image: url(#{$assetPath}/cloud.png);
 		background-repeat: repeat-x;
 		background-position: 0 50%;
-		@include animation(slide 80s linear infinite);
+		animation: slide 80s linear infinite;
 	}
 }
 
-@include keyframes(slide) {
-	to { background-position: 1800px 50%; }
+@keyframes slide {
+	to {
+		background-position: 1800px 50%;
+	}
 }
 
-::-webkit-input-placeholder {
+::placeholder {
 	color: $input-border-color;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-	color: $input-border-color;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-	color: $input-border-color;  
-}
-
-:-ms-input-placeholder {  
-	color: $input-border-color;  
 }
 
 span {
@@ -875,17 +753,9 @@ form {
 	textarea {
 		border-radius: $global-radius $global-radius 0 0;
 	}
-	::-webkit-input-placeholder {
+
+	::placeholder {
 		color: $alert-color;
-	}
-	:-moz-placeholder { /* Firefox 18- */
-		color: $alert-color;  
-	}
-	::-moz-placeholder {  /* Firefox 19+ */
-		color: $alert-color;  
-	}
-	:-ms-input-placeholder {  
-		color: $alert-color;  
 	}
 }
 
@@ -895,7 +765,10 @@ form {
 	height: 100vh;
 	width: 100%;
 	display: table;
-	background: linear-gradient(rgba($white, 0.65), rgba($white, 0.65)),
+	background: linear-gradient(
+					rgba($white, 0.65),
+					rgba($white, 0.65)
+				),
 				$tertiary-color url(#{$assetPath}/main-bg.jpg) 80% 50% no-repeat;
 	background-size: cover;
 	.content {
@@ -935,5 +808,4 @@ footer {
 	&:before {
 		content: "\007C";
 	}
-
 }

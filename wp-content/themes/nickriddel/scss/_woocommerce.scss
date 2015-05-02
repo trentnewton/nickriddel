@@ -30,8 +30,6 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 		margin-left: -8px;
 		margin-top: -8px;
 		display: block;
-		-webkit-animation: spin 1s ease-in-out infinite;
-	    -moz-animation: spin 1s ease-in-out infinite;
 	    animation: spin 1s ease-in-out infinite;
 	    content: "";
 	    background: url(#{$iconPath}/loader.svg) center center;
@@ -1322,8 +1320,6 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 
 			[placeholder] {
 					&:focus::-webkit-input-placeholder {
-					-webkit-transition: opacity 0.5s 0.5s ease;
-					-moz-transition: opacity 0.5s 0.5s ease;
 					transition: opacity 0.5s 0.5s ease;
 					opacity: 0;
 				}
@@ -1359,7 +1355,7 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 
 			input.input-text,
 			textarea {
-				@include box-sizing(border-box);
+				box-sizing: border-box;
 				width: 100%;
 				outline: 0;
 				line-height: 1;
@@ -1369,8 +1365,6 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 				height: rem-calc(64);
 				line-height: 1.5;
 				display: block;
-				-moz-box-shadow: none;
-				-webkit-box-shadow: none;
 				box-shadow: none;
 			}
 
@@ -1395,15 +1389,7 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 				}
 			}
 
-			::-webkit-input-placeholder {
-				line-height: normal;
-			}
-
-			:-moz-placeholder {
-				line-height: normal;
-			}
-
-			:-ms-input-placeholder {
+			::placeholder {
 				line-height: normal;
 			}
 		}
@@ -1698,8 +1684,6 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 			.coupon {
 				.input-text {
 					float: left;
-					-webkit-box-sizing: border-box;
-					-moz-box-sizing: border-box;
 					box-sizing: border-box;
 					border: 1px solid darken( $secondary, 10% );
 					padding: rem-calc(6 6 6 5);
@@ -1915,15 +1899,7 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 					}
 				}
 
-				::-webkit-input-placeholder {
-					color: darken( $secondary, 20% );
-				}
-
-				:-moz-placeholder {
-					color: darken( $secondary, 20% );
-				}
-
-				:-ms-input-placeholder {
+				::placeholder {
 					color: darken( $secondary, 20% );
 				}
 
