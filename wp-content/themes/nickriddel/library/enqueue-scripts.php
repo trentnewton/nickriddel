@@ -21,7 +21,7 @@ if (!function_exists('nickriddel_scripts')) :
     wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', false );
 
     // CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', false );
+    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', true );
 
     // Self hosted jQuery placed in the footer. (Comment the script above and uncomment the script below if you want to switch).
     //wp_register_script( 'jquery', get_template_directory_uri() . '/js/vendor/jquery.js', array(), '2.1.3', true );
