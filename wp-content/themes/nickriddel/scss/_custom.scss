@@ -406,7 +406,9 @@ a[class=wc-backward] {
 /* MAIN HEADER */
 
 #main {
-	background: linear-gradient(rgba($white, 0.15), rgba($white, 0.15)),
+	background: linear-gradient(
+					rgba($white, 0.15),
+					rgba($white, 0.15)),
 				$tertiary-color url(#{$assetPath}/main-bg.jpg) 80% 50% no-repeat;
 	background-size: cover;
 }
@@ -426,7 +428,9 @@ a[class=wc-backward] {
 /* ALBUM */
 
 #album {
-	background: linear-gradient(rgba($snow, 0.45), rgba($snow, 0.45)), 
+	background: linear-gradient(
+					rgba($snow, 0.45),
+					rgba($snow, 0.45)), 
 				url(#{$assetPath}/album-bg.jpg) 80% 50% no-repeat;
 	background-size: cover;
 	position: relative;
