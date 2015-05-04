@@ -166,7 +166,6 @@ h4,
 h5,
 h6 {
 	text-transform: lowercase;
-	margin-top: 0;
 }
 
 .subheader,
@@ -423,6 +422,12 @@ a[class=wc-backward] {
 
 #about {
 	background: scale-color($tertiary-color, $lightness: 40%);
+}
+
+/* ABOUT */
+
+#video {
+	background: $primary-color;
 }
 
 /* ALBUM */

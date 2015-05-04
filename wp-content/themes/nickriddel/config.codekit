@@ -536,6 +536,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/images\/video-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 453912,
+		"inputAbbreviatedPath": "\/assets\/img\/images\/video-bg.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/images\/video-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,

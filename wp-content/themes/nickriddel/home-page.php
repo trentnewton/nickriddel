@@ -15,6 +15,16 @@ get_header(); ?>
         </div>
       </div>
   </section>
+  <section id="video">
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="flex-video">
+          <?php remove_filter ('the_content', 'wpautop'); ?>
+          <?php show_post('video');  // Shows the content of the "Video" page. ?>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="album">
     <!-- Birds by Nicholas Guest http://guestandguest.com/blog/posts/css-bird-flying -->
     <div class="birds">

@@ -18,7 +18,7 @@ if (!function_exists('nickriddel_scripts')) :
     wp_deregister_script('prettyPhoto');
 
     // Modernizr is used for polyfills and feature detection. Must be placed in header. (Not required)
-    wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', false );
+    wp_register_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', true );
 
     // CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
     wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2', true );

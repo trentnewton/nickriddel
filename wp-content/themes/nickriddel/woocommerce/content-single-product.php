@@ -61,10 +61,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 			<div class="row double-space-top fade-in-up">
 				<div class="small-6 columns">
-				  <a href="<?php echo get_post_meta($post->ID, 'itunes_link', true); ?>" target="_blank" class="button order-button drop <?php echo get_post_meta($post->ID, 'itunes_disabled', true); ?>"><?php echo get_post_meta($post->ID, 'itunes_name', true); ?></a>
+				  <a href="<?php echo get_post_meta($post->ID, 'itunes_link', true); ?>" target="_blank" class="button order-button drop <?php echo get_post_meta($post->ID, 'itunes_disabled', true); ?>">
+				  	<?php echo get_post_meta($post->ID, 'itunes_name', true); ?>
+				  </a>
 				</div>
 				<div class="small-6 columns">
-				  <a href="#" data-reveal-id="open-order" class="button order-button spin"><?php echo get_post_meta($post->ID, 'order_cd', true); ?></a>
+				  <a href="#" data-reveal-id="open-order" class="button order-button spin">
+				  	<?php echo get_post_meta($post->ID, 'order_cd', true); ?>
+				  </a>
 				</div>
 			</div>
 		</div>
