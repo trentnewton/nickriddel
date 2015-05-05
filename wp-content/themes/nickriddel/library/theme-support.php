@@ -19,9 +19,12 @@ function FoundationPress_theme_support() {
     add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 }
 
-function show_post($path) {
-    $post = get_page_by_path($path);
-    $content = apply_filters('the_content', $post->post_content);
+function show_post( $path ) {
+    $post = get_page_by_path( $path ); 
+    $content = '';
+    if ( 'publish' == $post->post_status ) {
+        $content = apply_filters( 'the_content', $post->post_content ); 
+    }
     echo $content;
 }
 
@@ -30,8 +33,6 @@ function show_title($path) {
     $title = get_the_title($page);
     echo $title;
 }
-
-
 
 add_theme_support( 'woocommerce' );
 
