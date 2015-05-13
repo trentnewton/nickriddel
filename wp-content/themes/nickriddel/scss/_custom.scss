@@ -462,7 +462,7 @@ a[class=wc-backward] {
 	display: inline-block;
 	vertical-align: middle;
 	transform: translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	box-shadow: 0 0 1px rgba($black, 0);
 	backface-visibility: hidden;
 	position: relative;
 	padding-left: 2em;
