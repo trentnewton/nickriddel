@@ -55,7 +55,7 @@
 		    <header id="intro">
 		      <div class="row">
 		        <div class="small-12 columns">
-		            <svg title="<?php bloginfo( 'name' ); ?>" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 366.2 36.5" style="enable-background:new 0 0 366.2 36.5;" xml:space="preserve">
+		            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 366.2 36.5" style="enable-background:new 0 0 366.2 36.5;" xml:space="preserve">
 		              <g>
 		                <g>
 		                  <path class="st0" d="M0.2,0.9h4.2l21.1,30.4h0.1V0.9h3.2v34.7h-4.2L3.5,5.2H3.4v30.4H0.2V0.9z"/>
