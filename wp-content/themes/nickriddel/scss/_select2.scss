@@ -21,10 +21,7 @@ Version: 3.5.2
         border-radius: $global-radius;
         background-clip: padding-box;
         -webkit-touch-callout: none;
-          -webkit-user-select: none;
-             -moz-user-select: none;
-              -ms-user-select: none;
-                  user-select: none;
+        user-select: none;
         background-color: $white;
         font-weight: 400;
         margin-bottom: rem-calc(16);
@@ -137,9 +134,7 @@ Version: 3.5.2
     container without overlap because of margin/padding.
     More Info : http://www.quirksmode.org/css/box.html
     */
-    -webkit-box-sizing: border-box; /* webkit */
-     -moz-box-sizing: border-box; /* firefox */
-          box-sizing: border-box; /* css3 */
+    box-sizing: border-box; /* css3 */
 }
 
 .select2-drop-mask {
@@ -228,8 +223,7 @@ input {
         font-family: sans-serif;
         font-size: 1em;
         border: 1px solid $iron;
-        -webkit-box-shadow: none;
-                box-shadow: none;
+        box-shadow: none;
         background: $white url(#{$assetPath}/select2.png) no-repeat 100% -22px;
         &.select2-active {
             background: $white url(#{$assetPath}/select2-spinner.gif) no-repeat 100%;
@@ -249,8 +243,7 @@ input {
 .select2-dropdown-open {
     .select2-choice {
     border-bottom-color: transparent;
-    -webkit-box-shadow: 0 1px 0 $white inset;
-            box-shadow: 0 1px 0 $white inset;
+    box-shadow: 0 1px 0 $white inset;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
         .select2-arrow {
@@ -327,10 +320,7 @@ input {
         cursor: pointer;
         min-height: 1em;
         -webkit-touch-callout: none;
-          -webkit-user-select: none;
-             -moz-user-select: none;
-              -ms-user-select: none;
-                  user-select: none;
+        user-select: none;
     }
     .select2-highlighted {
         background: scale-color($primary-color, $lightness: 80%);
@@ -451,8 +441,7 @@ disabled look for disabled choices in the results dropdown
                 font-family: sans-serif;
                 outline: 0;
                 border: 0;
-                -webkit-box-shadow: none;
-                        box-shadow: none;
+                box-shadow: none;
                 background: transparent;
                 &.select2-active {
                     background: $white url(#{$assetPath}/select2-spinner.gif) no-repeat 100%;
@@ -469,10 +458,7 @@ disabled look for disabled choices in the results dropdown
             border-radius: $global-radius;
             background-clip: padding-box;
             -webkit-touch-callout: none;
-              -webkit-user-select: none;
-                 -moz-user-select: none;
-                  -ms-user-select: none;
-                      user-select: none;
+            user-select: none;
             background-color: $silver;
             .select2-chosen {
                 cursor: default;
