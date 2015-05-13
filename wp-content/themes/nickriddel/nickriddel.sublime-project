@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/Applications/MAMP/htdocs/nickriddel/wp-content/themes/nickriddel"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/nickriddel/wp-content/plugins/contact-form"
 		}
 	]
 }

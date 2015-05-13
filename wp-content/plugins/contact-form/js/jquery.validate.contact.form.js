@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
     
     $form.validate({ 
 
-        errorElement: "span",
+        errorElement: "label",
 
         highlight: function(label, errorClass, validClass) {
                                $(label).closest('.form-group').removeClass('has-success').addClass('has-error'); 

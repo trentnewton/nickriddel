@@ -734,9 +734,12 @@ div {
 	color: $input-border-color;
 }
 
-span {
+label {
 	&.error {
 	border-radius: 0 0 $global-radius $global-radius;
+
+	@extend span.error, small.error;
+
 	}
 }
 

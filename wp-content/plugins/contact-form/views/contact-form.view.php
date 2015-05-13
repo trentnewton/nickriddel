@@ -45,9 +45,9 @@
                                     />
                                   </div>
                                 </div>
-                                <span for="cscf_name" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['name']) ? 'block' : 'none'; ?>;">
+                                <label for="cscf_name" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['name']) ? 'block' : 'none'; ?>;">
                                     <?php if (isset($contact->Errors['name'])) echo $contact->Errors['name']; ?>
-                                </span>
+                                </label>
                             </div>
                         </div>
                         <!--email address-->
@@ -69,9 +69,9 @@
                                         />
                                     </div>
                                 </div>
-                                <span for="cscf_email" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['email']) ? 'block' : 'none'; ?>;">
+                                <label for="cscf_email" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['email']) ? 'block' : 'none'; ?>;">
                                     <?php if (isset($contact->Errors['email'])) echo $contact->Errors['email']; ?>
-                                </span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -84,9 +84,9 @@
                                     data-msg-required="<?php _e('Please give a message.','cleanansimple');?>"
                                     id="cscf_message" name="cscf[message]" rows="5" 
                                     placeholder="<?php _e('Enter your message here','cleanansimple');?>"><?php echo esc_textarea($contact->Message); ?></textarea>
-                                <span for="cscf_message" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['message']) ? 'block' : 'none'; ?>;">
+                                <label for="cscf_message" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['message']) ? 'block' : 'none'; ?>;">
                                     <?php if (isset($contact->Errors['message'])) echo $contact->Errors['message']; ?>
-                                </span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -100,9 +100,9 @@
                             <?php } ?>
                             <input <?php echo $contact->EmailToSender==true ? 'checked' : ''; ?> type="checkbox" id="cscf_email-sender" name="cscf[email-sender]">
                         </div>
-                        <span for="cscf_email-sender" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['email-sender']) ? 'block' : 'none'; ?>;">
+                        <label for="cscf_email-sender" class="help-inline help-block error" style="display:<?php echo isset($contact->Errors['email-sender']) ? 'block' : 'none'; ?>;">
                             <?php if (isset($contact->Errors['email-sender'])) echo $contact->Errors['email-sender']; ?>
-                        </span>
+                        </label>
                     </div>
                     <?php } ?>
                     <!-- recaptcha -->
