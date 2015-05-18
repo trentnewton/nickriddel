@@ -448,6 +448,7 @@ a[class=wc-backward] {
 		}
 		img {
 			border: $input-border-width $input-border-style rgba($primary-color, 0.25);
+			border-radius: $global-radius;
 		}
 }
 
