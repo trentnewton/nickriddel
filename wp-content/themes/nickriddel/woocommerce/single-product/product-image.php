@@ -32,11 +32,11 @@ global $post, $woocommerce, $product;
 				$gallery = '';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', $image_link, $image_title, $image ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" width="500" height="500" />', $image_link, $image_title, $image ), $post->ID );
 
 		} else {
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" width="500" height="500" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
 
 		}
 	?>
