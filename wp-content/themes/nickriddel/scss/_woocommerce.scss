@@ -29,7 +29,6 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 		left: 50%;
 		margin-left: -8px;
 		margin-top: -8px;
-		display: block;
 	    animation: spin 1s ease-in-out infinite;
 	    content: "";
 	    background: url(#{$iconPath}/loader.svg) center center;
