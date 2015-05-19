@@ -76,6 +76,7 @@
 		      </div>
 		    </header>
 	        <?php } else { ?>
+		<div class="content">
 	        <header id="main">
 	        	<div class="row">
 	        		<div class="small-12 columns">
