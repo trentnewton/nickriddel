@@ -21,25 +21,6 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-114x114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-72x72.png">
 	   	<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-precomposed.png">
-		<meta name="description" content="<?php echo ot_get_option( 'site_description' ); ?>" />
-	    <meta name="keywords" content="" />
-	    <meta name="author" content="<?php bloginfo( 'name' ); ?>" />   
-	    <meta property="og:image" content="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/link_img.jpg" />
-	    <meta property="og:description" content="<?php echo ot_get_option( 'site_description' ); ?>" />         
-	    <meta name="twitter:card" content="summary" />
-	    <meta name="twitter:title" content="<?php
-	global $page, $paged;
-	wp_title( '&#45;', true, 'right' );
-		bloginfo( 'name' );
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) )
-			echo " &#45; $site_description";
-		if ( $paged >= 2 || $page >= 2 )
-			echo '&#45;' . sprintf( __( 'Page %s', 'nickriddel' ), max( $paged, $page ) );
-	?>" />
-	    <meta name="twitter:description" content="<?php echo ot_get_option( 'site_description' ); ?>" />
-	    <meta name="twitter:image" content="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/link_img.jpg" />
-	    <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/link_img.jpg" />
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
