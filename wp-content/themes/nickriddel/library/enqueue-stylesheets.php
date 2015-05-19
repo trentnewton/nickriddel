@@ -22,26 +22,14 @@ function mgt_dequeue_stylesandscripts() {
     } 
 }
 
-add_action('get_header', 'remove_admin_login_header');
-function remove_admin_login_header() {
-	remove_action('wp_head', '_admin_bar_bump_cb');
-}
-
 add_action('wp_head', 'add_header_styles');
 
 function add_header_styles() {
   if ( is_admin_bar_showing() ) {?>
     <style>
-	html { margin-top: 32px; }
-	* html body { margin-top: 32px; }
-	@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px; }
-		* html body { margin-top: 46px; }
-	}
-	@media screen and ( max-width: 600px ) {
-	html { margin-top: 0; }
-	* html body { margin-top: 0; }
-	}
+	    @media screen and (max-width: 600px){
+	      #wpadminbar {position: fixed !important; }
+	    }
     </style>
   <?php }
 }
