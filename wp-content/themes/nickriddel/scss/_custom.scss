@@ -1,6 +1,6 @@
 @keyframes spin {
 	100% {
-		transform:rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 
@@ -73,7 +73,7 @@
 
 [class^="icon-"],
 [class*=" icon-"] {
-	font-family: 'icomoon';
+	font-family: icomoon;
 }
 
 [class^="icon-"],
@@ -418,13 +418,29 @@ a[class=wc-backward] {
 	border-top: 5px solid scale-color($tertiary-color, $lightness: -20%);
 }
 
+a.hover-logo {
+
+	.st0 {
+		transition: fill 300ms ease;
+	}
+
+	&:hover {
+
+		.st0 {
+			fill: $button-bg-hover;
+		}
+
+	}
+
+}
+
 /* ABOUT */
 
 #about {
 	background: scale-color($tertiary-color, $lightness: 40%);
 }
 
-/* ABOUT */
+/* VIDEO */
 
 #video {
 	background: $primary-color;
@@ -646,7 +662,8 @@ a[class=wc-backward] {
 		border-bottom-width: 0px;
 	}
 	40%,
-	60% { border-bottom-width: 40px;
+	60% { 
+		border-bottom-width: 40px;
 	}
 }
 
