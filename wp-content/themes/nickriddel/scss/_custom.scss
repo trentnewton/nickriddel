@@ -452,7 +452,7 @@ a.hover-logo {
 	background: linear-gradient(
 					rgba($snow, 0.45),
 					rgba($snow, 0.45)), 
-				url(#{$assetPath}/album-bg.jpg) 80% 50% no-repeat;
+				url(#{$assetPath}/album-bg.jpg) 80% 70% no-repeat;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
@@ -726,7 +726,7 @@ td {
 /* CONTACT */
 
 #contact {
-	background: url(#{$assetPath}/contact-bg.jpg) 80% 50% no-repeat;
+	background: url(#{$assetPath}/contact-bg.jpg) 80% 70% no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	padding: 0;
@@ -812,25 +812,25 @@ form {
 footer {
 	background: $primary-color;
 	color: $white;
-		.copyright {
-			text-align: center;
-				a {
-					color: $white;
-					&:link {
-						&:after {
-							background: $white;
-						}
-						&:hover {
-							&:before {
-								background: $white;
-							}
-						}
+	.copyright {
+		text-align: center;
+		a {
+			color: $white;
+			&:link {
+				&:after {
+					background: $white;
+				}
+				&:hover {
+					&:before {
+						background: $white;
 					}
 				}
-				.year {
-					font-family: $font-family-serif;
-				}
+			}
 		}
+		.year {
+			font-family: $font-family-serif;
+		}
+	}
 }
 .divider {
 	margin: 0 rem-calc(12);
