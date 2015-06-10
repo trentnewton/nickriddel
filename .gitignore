@@ -23,7 +23,6 @@ wp-content/upgrade
 wp-content/uploads
 wp-content/index.php
 wp-content/plugins/akismet
-wp-content/plugins/woocommerce
 wp-content/plugins/woocommerce-direct-checkout
 wp-content/plugins/wordpress-database-reset
 wp-content/plugins/theme-check
