@@ -143,6 +143,12 @@
 
 /* SETUP */
 
+html,
+body {
+	display: table;
+	width: 100%
+}
+
 body,
 input,
 textarea {
@@ -184,7 +190,7 @@ h3,
 #intro,
 #main,
 section,
-footer,
+.inside-footer,
 div#clouds {
 	padding: rem-calc(60) 0;
 }
@@ -229,13 +235,6 @@ footer {
 }
 
 .content {
-    min-height: 100%;
-	margin-bottom: rem-calc(-$footerHeight);
-
-	&:after {
-		content: "";
-		display: block;
-	}
 
 }
 
@@ -447,14 +446,6 @@ a[class=wc-backward] {
 		border-radius: $global-radius;
 		font-size: rem-calc(25);
 		color: $white;
-	}
-
-}
-
-.home {
-
-	footer {
-		position: relative;
 	}
 
 }
@@ -940,14 +931,11 @@ form {
 
 /* FOOTER */
 
-footer,
-.content:after {
-	height: rem-calc($footerHeight);
-}
-
 footer {
 	background: $primary-color;
 	color: $white;
+	display: table-row;
+	height: 1px;
 
 	.copyright {
 		text-align: center;
