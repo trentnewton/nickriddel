@@ -503,6 +503,11 @@ a.hover-logo {
 	background: $primary-color;
 }
 
+.flex-video {
+	@extend .flex-video;
+	border-radius: $global-radius;
+}
+
 /* ALBUM */
 
 #album {
