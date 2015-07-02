@@ -88,8 +88,9 @@ $include-html-global-classes: $include-html-classes;
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$assetPath : "../assets/img/images";
-$iconPath : "../assets/img/icons";
+$assetPath: "../assets/img/images";
+$iconPath: "../assets/img/icons";
+$footerHeight: 147;
 
 // We use these to define default font stacks
 $font-family-sans-serif: AvenirLTStd, Verdana, Geneva, sans-serif;

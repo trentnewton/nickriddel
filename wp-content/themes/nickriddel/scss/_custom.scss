@@ -91,21 +91,27 @@
 }
 
 .icon-down_caret {
+
 	&:before {
 		content: "\e602";
 	}
+
 }
 
 .icon-cd {
+
 	&:before {
 		content: "\e601";
 	}
+
 }
 
 .icon-apple {
+
 	&:before {
 		content: "\e600";
 	}
+
 }
 
 /**
@@ -185,11 +191,15 @@ div#clouds {
 
 section,
 footer {
+
 	p {
+
 		&:last-child {
 			margin-bottom: 0;
 		}
+
 	}
+
 }
 
 .space-top {
@@ -219,7 +229,14 @@ footer {
 }
 
 .content {
-	
+    min-height: 100%;
+	margin-bottom: rem-calc(-$footerHeight);
+
+	&:after {
+		content: "";
+		display: block;
+	}
+
 }
 
 button,
@@ -227,9 +244,11 @@ button,
 input[type="submit"] {
 	border-radius: $global-radius;
 	outline: none;
+
 	&.alt {
 		margin-bottom: rem-calc(20);
 	}
+
 }
 
 #{text-inputs(all, 'input')},
@@ -269,39 +288,51 @@ table {
 	right: 0;
 	width: 20px;
 	height: 20px;
+
 	.rect {
 		background-color: $primary-color;
 		height: 100%;
 		width: 4px;
 		float: left;
 		animation: loading-rect 0.6s infinite ease-in-out;
-			~ {
-				.rect {
-					margin-left: 4px;
-				}
+
+		~ {
+
+			.rect {
+				margin-left: 4px;
 			}
+
+		}
+
 	}
+
 	.rect1 {
 		animation-delay: -0.3s;
 	}
+
 	.rect2 {
 		animation-delay: -0.2s;
 	}
+
 	.rect3 {
 		animation-delay: -0.1s;
 	}
+
 }
 
 @keyframes loading-rect {
+
 	0%,
 	100% {
 		transform: scaleY(0.2);
 		opacity: 0.2;
 	} 
+
 	50% {
 		transform: scaleY(1.0);
 		opacity: 1;
-	};
+	}
+
 }
 
 /* LINK EFFECTS */
@@ -310,63 +341,78 @@ a:not([class]),
 a.shipping-calculator-button,
 a.about_paypal,
 a[class=wc-backward] {
+
     &:link {
     	position: relative;
     	padding-bottom: rem-calc(4);
-    		&:before,
-    		&:after {
-    			content: '';
-				display: block;
-				position: absolute;
-				bottom: 0;
-				height: rem-calc(1);
-			    width: 100%;
-    		}
-    		&:before {
-    			transition: width 0s ease;
-    			left: 0;
-    		}
-    		&:after {
-			    right: 0;
+
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			height: rem-calc(1);
+		    width: 100%;
+		}
+
+		&:before {
+			transition: width 0s ease;
+			left: 0;
+		}
+
+		&:after {
+		    right: 0;
+		    background: $primary-color;
+		    transition: width 300ms ease;
+		}
+
+		&:hover {
+
+			&:before,
+			&:after {
+				width: 0%;
+			}
+
+			&:before {
 			    background: $primary-color;
 			    transition: width 300ms ease;
-    		}
-    		&:hover {
-    			&:before,
-    			&:after {
-    				width: 0%;
-    			}
-    			&:before {
-				    background: $primary-color;
-				    transition: width 300ms ease;
-    			}
-    			&:after {
-					background: transparent;
-					transition: width 0s ease;
-    			}
-    		}
+			}
+
+			&:after {
+				background: transparent;
+				transition: width 0s ease;
+			}
+
+		}
 
     }
+
 }
 
 /* ALERT BOXES */
 
 .alert-box {
+
 	h4 {
 		color: $white;
 	}
+
 	&.success {
 	    background-color: rgba($success-color, 0.5);
 	}
+
 	&.warning {
 	    background-color: rgba($warning-color, 0.5);
 	}
+
 	&.info {
 	    background-color: rgba($info-color, 0.5);
 	}
+
 }
 
-/* INTRO */
+/* INTRO / HOME PAGE */
 
 #intro {
 	height: 100vh;
@@ -389,17 +435,28 @@ a[class=wc-backward] {
 	bottom: rem-calc(100);
 	left: 50%;
 	margin-left: -40px;
-		@media #{$small-only} {
-			bottom: rem-calc(60);
-		}
-		span {
-			border: $input-border-width $input-border-style $input-border-color;
-			background: rgba(scale-color($primary-color, $lightness: 80%), 0.25);
-			padding: rem-calc(20);
-			border-radius: $global-radius;
-			font-size: rem-calc(25);
-			color: $white;
-		}
+
+	@media #{$small-only} {
+		bottom: rem-calc(60);
+	}
+
+	span {
+		border: $input-border-width $input-border-style $input-border-color;
+		background: rgba(scale-color($primary-color, $lightness: 80%), 0.25);
+		padding: rem-calc(20);
+		border-radius: $global-radius;
+		font-size: rem-calc(25);
+		color: $white;
+	}
+
+}
+
+.home {
+
+	footer {
+		position: relative;
+	}
+
 }
 
 /* MAIN HEADER */
@@ -456,16 +513,21 @@ a.hover-logo {
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
-		@media #{$small-only} {
-			text-align: center;
-				h2 {
-					padding-top: rem-calc(30);
-				}
+
+	@media #{$small-only} {
+		text-align: center;
+
+		h2 {
+			padding-top: rem-calc(30);
 		}
-		img {
-			border: $input-border-width $input-border-style rgba($primary-color, 0.25);
-			border-radius: $global-radius;
-		}
+
+	}
+
+	img {
+		border: $input-border-width $input-border-style rgba($primary-color, 0.25);
+		border-radius: $global-radius;
+	}
+
 }
 
 .order-button {
@@ -484,58 +546,71 @@ a.hover-logo {
 	position: relative;
 	padding-left: 2em;
 	padding-right: 1em;
-		&:before {
-			position: absolute;
-			left: 1em;
-			padding: 0 1px;
-			font-family: icomoon;
-		}
+
+	&:before {
+		position: absolute;
+		left: 1em;
+		padding: 0 1px;
+		font-family: icomoon;
+	}
+
 }
 
 /* icon spin */
 
 .spin {
-	  	&:before {
-	  		content: "\e601";
-	  		transition-duration: 1s;
-	  		transition-property: transform;
-	  		transition-timing-function: ease-in-out;
-	  	}
-	  	&:hover,
-	  	&:focus,
-	  	&:active {
-	  		&:before {
-	  			transform: rotate(720deg);
-	  		}
-	  	}
+
+  	&:before {
+  		content: "\e601";
+  		transition-duration: 1s;
+  		transition-property: transform;
+  		transition-timing-function: ease-in-out;
+  	}
+
+  	&:hover,
+  	&:focus,
+  	&:active {
+
+  		&:before {
+  			transform: rotate(720deg);
+  		}
+
+  	}
+
 }
 
 /* icon drop */
 
 .drop {
-		&:before {
-			content: "\e600";
-			opacity: 1;
-			transform: translateZ(0);
-		}
-		&:hover,
-	  	&:focus,
-	  	&:active {
-	  		&:before {
-	  			opacity: 0;
-	  			transition-duration: 0.3s;
-	  			animation-name: drop;
-				animation-duration: 0.5s;
-				animation-delay: 0.3s;
-				animation-fill-mode: forwards;
-				animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-	  		}
-	  	}
+
+	&:before {
+		content: "\e600";
+		opacity: 1;
+		transform: translateZ(0);
+	}
+
+	&:hover,
+  	&:focus,
+  	&:active {
+
+  		&:before {
+  			opacity: 0;
+  			transition-duration: 0.3s;
+  			animation-name: drop;
+			animation-duration: 0.5s;
+			animation-delay: 0.3s;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  		}
+
+  	}
+
 }
 
 /* icon drop */
 
 @keyframes drop {
+
 	0% {
 		opacity: 0;
 	}
@@ -549,6 +624,7 @@ a.hover-logo {
 	100% {
 		opacity: 1;
 	}
+
 }
 
 /* birds */
@@ -562,9 +638,11 @@ a.hover-logo {
 	position: absolute;
 	width: 100px;
 	top: 45%;
-		@media #{$small-only} {
-			top: 64%;
-		}
+
+	@media #{$small-only} {
+		top: 64%;
+	}
+
 }
 
 .fly {
@@ -573,24 +651,30 @@ a.hover-logo {
 
 #bird1 {
 	transform: scale(0.2,0.2);
-		@media #{$small-only} {
-			transform: scale(0.1,0.1);
-		}
+
+	@media #{$small-only} {
+		transform: scale(0.1,0.1);
+	}
+
 }
 
 #bird2 {
 	transform: scale(0.4,0.4);
-		@media #{$small-only} {
-			transform: scale(0.2,0.2);
-		}
+
+	@media #{$small-only} {
+		transform: scale(0.2,0.2);
+	}
+
 }
 
 .bird { 
 	position: absolute;
 	animation: bob 0.7s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4);
+
 	div {
 		position: absolute;
 	}
+
  }
 
 .body,
@@ -645,46 +729,58 @@ a.hover-logo {
 }
 
 @keyframes flap-r {
+
 	0%,
 	10%,
 	100% {
 		border-top-width: 60px;
 	}
+
 	40%,
 	60% {
 		border-top-width: 10px;
 	}
+
 }
 
 @keyframes flap-l {
+
 	0%,
 	100% {
 		border-bottom-width: 0px;
 	}
+
 	40%,
 	60% { 
 		border-bottom-width: 40px;
 	}
+
 }
 
 @keyframes fly {
+
 	0% {
 		left: 100%;
 	}
+
 	30%,
 	100% {
 		left: -20%;
 	}
+
 }
 
 @keyframes bob {
+
 	0%,
 	100% { 
 		top: 25px;
 	}
+
 	50% {
 		top: 0;
 	}
+
 }
 
 /* WOOCOMMERCE */
@@ -695,32 +791,43 @@ a.hover-logo {
 }
 
 td {
+
 	&.actions {
-	text-align: right;
+		text-align: right;
 	}
+
 	&.product-quantity {
+
 		> .quantity {
 			margin: 0;
 		}
-	} 
+
+	}
+
 }
 
 .cart_totals {
+
 	table {
 		width: 100%;
+
 		th {
 			vertical-align: top;
 			width: 25%;
 		}
+
 	}
+
 }
 
 #place_order {
 	float: right;
+
 	@media #{$small-only} {
 		float: none;
 	    width: 100%;
 	}
+
 }
 
 /* CONTACT */
@@ -733,18 +840,22 @@ td {
 }
 
 div {
+
 	&#clouds { 
 		background-image: url(#{$assetPath}/cloud.png);
 		background-repeat: repeat-x;
 		background-position: 0 50%;
 		animation: slide 80s linear infinite;
 	}
+
 }
 
 @keyframes slide {
+
 	to {
 		background-position: 1800px 50%;
 	}
+
 }
 
 ::placeholder {
@@ -752,33 +863,45 @@ div {
 }
 
 label {
+
 	&.error {
-	border-radius: 0 0 $global-radius $global-radius;
-
-	@extend span.error, small.error;
-
+		@extend span.error, small.error;
+		border-radius: 0 0 $global-radius $global-radius;
 	}
+
 }
 
 form {
+
 	.error {
+
 		.prefix-radius {
+
 			&.row {
+
 				&.collapse {
+
 					.prefix {
 						border-radius: $global-radius 0 0 0;
 					}
+
 					input,
 					textarea {
 						border-radius: 0 $global-radius 0 0;
 					}
+
 				}
+
 			}
+
 		}
+
 	}
+
 }
 
 .error {
+
 	textarea {
 		border-radius: $global-radius $global-radius 0 0;
 	}
@@ -786,6 +909,7 @@ form {
 	::placeholder {
 		color: $alert-color;
 	}
+
 }
 
 /* 404 */
@@ -800,41 +924,64 @@ form {
 				),
 				$tertiary-color url(#{$assetPath}/main-bg.jpg) 80% 50% no-repeat;
 	background-size: cover;
+
 	.content {
 		width: 100%;
 		display: table-cell;
 		vertical-align: middle;
 	}
+
 }
 
 /* FOOTER */
 
+footer,
+.content:after {
+	height: rem-calc($footerHeight);
+}
+
 footer {
 	background: $primary-color;
 	color: $white;
+
 	.copyright {
 		text-align: center;
+
 		a {
+
 			color: $white;
+
 			&:link {
+
 				&:after {
 					background: $white;
 				}
+
 				&:hover {
+
 					&:before {
 						background: $white;
 					}
+
 				}
+
 			}
+
 		}
+
 		.year {
 			font-family: $font-family-serif;
 		}
+
 	}
+
 }
+
 .divider {
 	margin: 0 rem-calc(12);
+
 	&:before {
 		content: "\007C";
 	}
+
 }
