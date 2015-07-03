@@ -423,6 +423,7 @@ a[class=wc-backward] {
 		url(#{$assetPath}/intro-bg.jpg) 80% 50% no-repeat,
 		url(#{$assetPath}/main-bg.jpg);
 	background-size: cover;
+	position: relative;
 }
 
 .st0 {
