@@ -143,7 +143,6 @@
 
 /* SETUP */
 
-html,
 body {
 	display: table;
 	width: 100%
@@ -267,7 +266,7 @@ table {
 
 #loading {
     background: $tertiary-color;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     height: 100%;
@@ -276,6 +275,7 @@ table {
   	vertical-align: middle;
     transform: scale(3,3);
     z-index: 9999;
+    overflow: hidden;
 }
 
 .loading-icon {
@@ -523,6 +523,7 @@ a.hover-logo {
 	img {
 		border: $input-border-width $input-border-style rgba($primary-color, 0.25);
 		border-radius: $global-radius;
+		width: 100%;
 	}
 
 }
