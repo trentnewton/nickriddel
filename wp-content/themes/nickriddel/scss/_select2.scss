@@ -315,7 +315,7 @@ input {
     }
     .select2-result-label {
         font-size: $input-font-size;
-        padding: 5px 7px;
+        padding: rem-calc(5 7);
         margin: 0;
         cursor: pointer;
         min-height: 1em;
@@ -324,14 +324,18 @@ input {
     }
     .select2-highlighted {
         background: scale-color($primary-color, $lightness: 80%);
+        color: $black;
         border-radius: $global-radius;
+
         em {
             background: transparent;
         }
+
         ul {
             background: $white;
             color: $black;
         }
+
     }
     .select2-no-results,
     .select2-searching,
@@ -339,7 +343,7 @@ input {
     .select2-selection-limit {
         background: $white-smoke;
         display: list-item;
-        padding-left: 5px;
+        padding-left: rem-calc(5);
     }
 /*
 disabled look for disabled choices in the results dropdown
@@ -365,43 +369,43 @@ disabled look for disabled choices in the results dropdown
 
 .select2-results-dept-1 {
     .select2-result-label {
-        padding-left: 20px
+        padding-left: 20px;
     }
 }
 
 .select2-results-dept-2 {
     .select2-result-label {
-        padding-left: 40px
+        padding-left: 40px;
     }
 }
 
 .select2-results-dept-3 {
     .select2-result-label {
-        padding-left: 60px
+        padding-left: 60px;
     }
 }
 
 .select2-results-dept-4 {
     .select2-result-label {
-        padding-left: 80px
+        padding-left: 80px;
     }
 }
 
 .select2-results-dept-5 {
     .select2-result-label {
-        padding-left: 100px
+        padding-left: 100px;
     }
 }
 
 .select2-results-dept-6 {
     .select2-result-label {
-        padding-left: 110px
+        padding-left: 110px;
     }
 }
 
 .select2-results-dept-7 {
     .select2-result-label {
-        padding-left: 120px
+        padding-left: 120px;
     }
 }
 
