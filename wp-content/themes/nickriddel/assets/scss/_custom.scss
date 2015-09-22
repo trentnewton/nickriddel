@@ -426,6 +426,15 @@ a[class=wc-backward] {
 
 }
 
+/* GLOBAL */
+
+.old-browser-notice {
+	text-align: center;
+	padding-top: $paragraph-margin-bottom;
+	padding-bottom: $paragraph-margin-bottom;
+	background-color: $white;
+}
+
 /* INTRO / HOME PAGE */
 
 #intro {

@@ -11,6 +11,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<!--[if lte IE 9]><p class="old-browser-notice">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> to experience this site.</p><![endif]-->
 		<?php if( is_front_page() ) : ?>
         <div id="loading">
 	      <div class="loading-icon">
