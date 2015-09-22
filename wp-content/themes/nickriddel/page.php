@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section id="page">
 <div class="row">
-	<div class="small-12 columns" role="main">
+	<div class="column">
 
 	<?php do_action('foundationPress_before_content'); ?>
 

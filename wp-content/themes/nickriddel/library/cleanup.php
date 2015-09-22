@@ -201,4 +201,16 @@ function img_unautop($pee) {
 }
 endif;
 
+add_action('wp_head', 'add_header_styles');
+
+function add_header_styles() {
+  if ( is_admin_bar_showing() ) {?>
+    <style>
+        @media screen and (max-width: 600px){
+          #wpadminbar {position: fixed !important; }
+        }
+    </style>
+  <?php }
+}
+
 ?>
