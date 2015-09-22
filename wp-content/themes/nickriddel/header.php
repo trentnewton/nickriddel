@@ -4,7 +4,6 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="application-name" content="<?php bloginfo( 'name' ); ?>">
-        <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-114x114.png">
         <meta name="msapplication-TileColor" content="#7f6d60">
         <meta name="theme-color" content="#7f6d60">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
