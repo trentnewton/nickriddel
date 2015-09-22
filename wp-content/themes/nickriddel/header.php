@@ -11,7 +11,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php if (is_front_page()) { ?>
+		<?php if( is_front_page() ) : ?>
         <div id="loading">
 	      <div class="loading-icon">
 	        <div class="rect rect1"></div>
@@ -60,7 +60,8 @@
 		        <span class="scroll-flash loop slow icon-down_caret"></span>
 		      </div>
 		    </header>
-	        <?php } else { ?>
+		<?php elseif ( is_404() ) : ?>
+	    <?php else : ?>
 		<main class="content">
 	        <header id="main">
 	        	<div class="row">
@@ -101,4 +102,4 @@
 	        		</div>
 	        	</div>
 	        </header>
-	        <?php } ?>
+	    <?php endif; ?>

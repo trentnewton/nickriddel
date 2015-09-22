@@ -1,15 +1,13 @@
-<!doctype html>
-<html class="no-js" <?php language_attributes(); ?> >
-	<head>
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="application-name" content="<?php bloginfo( 'name' ); ?>">
-        <meta name="msapplication-TileColor" content="#7f6d60">
-        <meta name="theme-color" content="#7f6d60">
-        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-		<?php wp_head(); ?>
-	</head>
+<?php
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @package WordPress
+ * @subpackage FoundationPress
+ * @since FoundationPress 1.0.0
+ */
+
+get_header(); ?>
 	<body>
 		<section id="page404">
 			<div class="content">
