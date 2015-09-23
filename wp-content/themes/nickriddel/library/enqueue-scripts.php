@@ -39,16 +39,10 @@ if (!function_exists('nickriddel_scripts')) :
     // If you'd like to cherry-pick the foundation components you need in your project, head over to Gruntfile.js and see lines 67-88
     // It's a good idea to do this, performance-wise. No need to load everything if you're just going to use the grid anyway, you know :)
     wp_register_script( 'app-js', get_template_directory_uri()."/assets/js/min/app-min.js", array('jquery'), '5.5.1', true );
-    wp_register_script( 'jquery-blockui', '//cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.61.0-2013.06.06/jquery.blockUI.min.js', array( 'jquery' ), '2.61.0', true );
-    wp_register_script( 'jquery-payment', '//cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.1/jquery.payment.min.js', array( 'jquery' ), '1.2.1', true );
-    wp_register_script( 'jquery-cookie', '//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array( 'jquery' ), '1.4.1', true );
 
     // Enqueue all registered scripts
     wp_enqueue_script('jquery');
     wp_enqueue_script('app-js');
-    wp_enqueue_script('jquery-blockui');
-    wp_enqueue_script('jquery-payment');
-    wp_enqueue_script('jquery-cookie');
 
   }
 

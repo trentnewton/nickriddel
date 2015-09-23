@@ -1,0 +1,27 @@
+{
+  "name": "jquery.payment",
+  "version": "1.1.6",
+  "main": "lib/jquery.payment.js",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "example",
+    "node_modules",
+    "src",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "homepage": "https://github.com/dwilkie/jquery.payment",
+  "_release": "1.1.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.6",
+    "commit": "6f75e5bb45cc59bda2c158dbdfddd49ed05cdf71"
+  },
+  "_source": "git://github.com/dwilkie/jquery.payment.git",
+  "_target": "~1.1.6",
+  "_originalSource": "jquery-payment",
+  "_direct": true
+}
