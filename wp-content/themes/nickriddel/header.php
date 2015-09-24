@@ -23,8 +23,8 @@
 	    <main class="content">
 		    <header id="intro">
 		      <div class="row">
-		        <div class="small-12 columns">
-		            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 366.2 36.5" xml:space="preserve">
+		        <div class="column">
+		            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 366.2 36.5" xml:space="preserve">
 		              	<g>
 							<path class="st0" d="M0.2,0.9h4.2l21.1,30.4h0.1V0.9h3.2v34.7h-4.2L3.5,5.2H3.4v30.4H0.2V0.9z"/>
 							<path class="st0" d="M45.8,0.9H49v34.7h-3.2V0.9z"/>
@@ -58,7 +58,7 @@
 		        </div>
 		      </div>
 		      <div class="scroll">
-		        <span class="scroll-flash loop slow icon-down_caret"></span>
+		        <span class="scroll-flash loop icon-down_caret"></span>
 		      </div>
 		    </header>
 		<?php elseif ( is_404() ) : ?>
@@ -66,9 +66,9 @@
 		<main class="content">
 	        <header id="main">
 	        	<div class="row">
-	        		<div class="small-12 columns">
+	        		<div class="column">
 	        			<a href="<?php echo home_url(); ?>/" class="hover-logo" title="<?php bloginfo( 'name' ); ?>">
-				        	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 366.2 36.5" xml:space="preserve">
+				        	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 366.2 36.5" xml:space="preserve">
 				                <g>
 									<path class="st0" d="M0.2,0.9h4.2l21.1,30.4h0.1V0.9h3.2v34.7h-4.2L3.5,5.2H3.4v30.4H0.2V0.9z"/>
 									<path class="st0" d="M45.8,0.9H49v34.7h-3.2V0.9z"/>

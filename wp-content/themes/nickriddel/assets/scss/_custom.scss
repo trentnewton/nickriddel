@@ -151,10 +151,8 @@ body {
 body,
 input,
 textarea {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	text-size-adjust: 100%;
+	@extend .antialiased;
 }
 
 article,
@@ -164,7 +162,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 nav,
 section,
@@ -205,7 +202,7 @@ h3,
 #main,
 section,
 .inside-footer,
-div#clouds {
+#clouds {
 	padding: rem-calc(60 0);
 }
 
@@ -240,17 +237,41 @@ footer {
 	text-align: center;
 }
 
+table { 
+	border-spacing: 0;   
+	border-radius: $global-radius;
+	border-collapse: separate;
+}
+
+/* ANIMATIONS */
+
 .loop {
 	animation-iteration-count: infinite;
 }
 
-.slow {
-	animation-duration: 4s;
+.fadeInDown {
+	@include fadeInDown();
 }
 
-.content {
-
+.fadeInUp {
+	@include fadeInUp();
 }
+
+.fadeInLeft {
+	@include fadeInLeft();
+}
+
+.fadeInRight {
+	@include fadeInRight();
+}
+
+.flash {
+	@include flash(
+		$duration: 4s
+	);
+}
+
+/* FORMS */
 
 button,
 .button,
@@ -269,12 +290,6 @@ select {
     border-radius: $global-radius;
     outline: none;
 	transition: all 0.15s linear 0s;
-}
-
-table { 
-	border-spacing: 0;   
-	border-radius: $global-radius;
-	border-collapse: separate;
 }
 
 /* LOADING */
