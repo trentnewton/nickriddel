@@ -453,7 +453,7 @@ a[class=wc-backward] {
 /* INTRO / HOME PAGE */
 
 #intro {
-	height: 100vh;
+	height: 500px;
 	background:
 		linear-gradient(
 			rgba($tertiary-color, 0.15),
@@ -954,7 +954,7 @@ form {
 /* 404 */
 
 #page404 {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	display: table;
 	background: linear-gradient(
@@ -1017,6 +1017,17 @@ footer {
 
 	&:before {
 		content: "\007C";
+	}
+
+}
+
+/* FEATURE DETECTION */
+
+.cssvhunit {
+
+	#intro,
+	#page404 {
+		height: 100vh;
 	}
 
 }

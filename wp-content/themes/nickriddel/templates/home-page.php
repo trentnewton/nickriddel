@@ -9,12 +9,12 @@ get_header(); ?>
   if($page_data->post_status == 'publish'){ ?>
   <section id="about">
       <div class="row">
-        <div class="small-12 columns">
+        <div class="column">
           <h2 class="fade-in-down"><?php _e( 'About', 'nickriddel' ); ?></h2>
         </div>
       </div>
       <div class="row">
-        <div class="small-12 columns fade-in-up">
+        <div class="column fade-in-up">
          <?php show_post('about');  // Shows the content of the "About" page. ?>
         </div>
       </div>
@@ -26,7 +26,7 @@ get_header(); ?>
   if($page_data->post_status == 'publish'){ ?>
   <section id="video">
     <div class="row">
-      <div class="small-12 columns">
+      <div class="column">
         <div class="flex-video fade-in-left">
           <?php remove_filter ('the_content', 'wpautop'); ?>
           <?php show_post('video');  // Shows the content of the "Video" page. ?>
@@ -69,12 +69,12 @@ get_header(); ?>
   <section id="contact">
     <div id="clouds">
       <div class="row">
-        <div class="small-12 columns">
+        <div class="column">
           <h2 class="fade-in-down"><?php _e( 'Contact', 'nickriddel' ); ?></h2>
         </div>
       </div>
       <div class="row">
-        <div class="small-12 columns">
+        <div class="column">
           <?php show_post('contact');  // Shows the content of the "Contact" page. ?>
         </div>
       </div>
