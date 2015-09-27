@@ -899,6 +899,7 @@ div {
 
 ::placeholder {
 	color: $input-border-color;
+	opacity: 1;
 }
 
 label {
@@ -947,6 +948,7 @@ form {
 
 	::placeholder {
 		color: $alert-color;
+		opacity: 1;
 	}
 
 }
