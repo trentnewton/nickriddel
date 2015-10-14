@@ -643,6 +643,7 @@ $input-font-color: $primary-color;
 $input-focus-bg-color: scale-color($primary-color, $lightness: 95%);
 $input-border-color: scale-color($primary-color, $lightness: 40%);
 $input-focus-border-color: scale-color($primary-color, $lightness: 10%);
+$input-placeholder-font-color: $input-border-color;
 // $input-border-style: solid;
 // $input-border-width: 1px;
 // $input-border-radius: $global-radius;

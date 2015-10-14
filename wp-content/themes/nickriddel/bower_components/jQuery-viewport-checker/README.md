@@ -7,8 +7,15 @@ Little script that detects if an element is in the viewport and adds a class to 
 
 Installation
 ------------
-Just include the script and jQuery in your website <head> tag and call it on the elements you want to check.
-```code
+
+Download the file located in `/dist` or use bower to install it. 
+
+```
+bower install jQuery-viewport-checker
+```
+
+Include the script and jQuery in your website <head> tag and call it on the elements you want to check.
+```html
 <head>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="dist/jquery.viewportchecker.min.js"></script>
@@ -24,10 +31,12 @@ Just include the script and jQuery in your website <head> tag and call it on the
 Options
 -------
 The currently available global options are:
-```code
+```javascript
 $('.dummy').viewportChecker({
-    classToAdd: 'visible', // Class to add to the elements when they are visible
+    classToAdd: 'visible', // Class to add to the elements when they are visible,
+    classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
     classToRemove: 'invisible', // Class to remove before adding 'classToAdd' to the elements
+    removeClassAfterAnimation: false, // Remove added classes after animation has finished
     offset: [100 OR 10%], // The offset of the elements (let them appear earlier or later). This can also be percentage based by adding a '%' at the end
     invertBottomOffset: true, // Add the offset as a negative number to the element's bottom
     repeat: false, // Add the possibility to remove the class if the elements are not visible
@@ -39,12 +48,13 @@ $('.dummy').viewportChecker({
 Besides the global options you can also add data-attributes to each individual element. These attributes will override the global options. 
 
 Available attributes are:
-```code
-<div data-vp-add-class="random"></div>          >   classToAdd
-<div data-vp-remove-class="random"></div>       >	classToRemove
-<div data-vp-offset="[100 OR 10%]"></div>       >	offset
-<div data-vp-repeat="true"></div>               >	repeat
-<div data-vp-scrollHorizontal="false"></div>    >	scrollHorizontal
+```html
+<div data-vp-add-class="random"></div>          > classToAdd
+<div data-vp-remove-class="random"></div>       > classToRemove
+<div data-vp-remove-after-animation="true|false"></div>      > Removes added classes after CSS3 animation has completed
+<div data-vp-offset="[100 OR 10%]"></div>       > offset
+<div data-vp-repeat="true"></div>               > repeat
+<div data-vp-scrollHorizontal="false"></div>    > scrollHorizontal
 ```
 
 Use case

@@ -36,8 +36,8 @@
     "branch": "master",
     "commit": "316f6e5d76a33266970778e80507149d9ef6a02d"
   },
-  "_source": "git://github.com/malsup/blockui.git",
+  "_source": "git://github.com/ueqt/blockui.git",
   "_target": "*",
-  "_originalSource": "malsup/blockui",
+  "_originalSource": "blockUI",
   "_direct": true
 }

@@ -29,6 +29,5 @@
   },
   "_source": "git://github.com/Igosuki/animate.scss.git",
   "_target": "~3.1.0",
-  "_originalSource": "animate.css-scss",
-  "_direct": true
+  "_originalSource": "animate.css-scss"
 }
