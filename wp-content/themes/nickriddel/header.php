@@ -21,7 +21,7 @@
 	      </div>
 	    </div>
 	    <main class="content">
-		    <header id="intro">
+		    <header id="intro" class="vh_height100">
 		      <div class="row">
 		        <div class="column">
 		            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 366.2 36.5" xml:space="preserve">

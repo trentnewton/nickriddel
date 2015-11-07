@@ -4,73 +4,6 @@
 	}
 }
 
-@font-face {
-    font-family: florenceregular;
-    src: url('fonts/Florence-Regular-webfont.eot');
-    src: url('fonts/Florence-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Florence-Regular-webfont.woff2') format('woff2'),
-         url('fonts/Florence-Regular-webfont.woff') format('woff'),
-         url('fonts/Florence-Regular-webfont.ttf') format('truetype'),
-         url('fonts/Florence-Regular-webfont.svg#florenceregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: AvenirLTStd;
-	src: url('fonts/2D7592_0_0.eot');
-	src: url('fonts/2D7592_0_0.eot?#iefix') format('embedded-opentype'),
-		url('fonts/2D7592_0_0.woff2') format('woff2'),
-		url('fonts/2D7592_0_0.woff') format('woff'),
-		url('fonts/2D7592_0_0.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-  
-@font-face {
-	font-family: AvenirLTStd;
-	src: url('fonts/2D7592_1_0.eot');
-	src: url('fonts/2D7592_1_0.eot?#iefix') format('embedded-opentype'),
-		url('fonts/2D7592_1_0.woff2') format('woff2'),
-		url('fonts/2D7592_1_0.woff') format('woff'),
-		url('fonts/2D7592_1_0.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
-  
-@font-face {
-	font-family: AvenirLTStd;
-	src: url('fonts/2D7592_2_0.eot');
-	src: url('fonts/2D7592_2_0.eot?#iefix') format('embedded-opentype'),
-		url('fonts/2D7592_2_0.woff2') format('woff2'),
-		url('fonts/2D7592_2_0.woff') format('woff'),
-		url('fonts/2D7592_2_0.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-  
-@font-face {
-	font-family: AvenirLTStd;
-	src: url('fonts/2D7592_3_0.eot');
-	src: url('fonts/2D7592_3_0.eot?#iefix') format('embedded-opentype'),
-		url('fonts/2D7592_3_0.woff2') format('woff2'),
-		url('fonts/2D7592_3_0.woff') format('woff'),
-		url('fonts/2D7592_3_0.ttf') format('truetype');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: icomoon;
-	src: url('fonts/icomoon.eot');
-	src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		 url('fonts/icomoon.woff') format('woff'),
-		url('fonts/icomoon.ttf') format('truetype'),
-		url('fonts/icomoon.svg?#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 [class^="icon-"],
 [class*=" icon-"] {
 	font-family: icomoon;
@@ -191,6 +124,10 @@ h6 {
 	text-transform: lowercase;
 }
 
+div:focus {
+	outline: none;
+}
+
 .subheader,
 h3,
 #page404 h1 {
@@ -266,9 +203,11 @@ table {
 }
 
 .flash {
+
 	@include flash(
 		$duration: 4s
 	);
+
 }
 
 /* FORMS */
@@ -453,7 +392,6 @@ a[class=wc-backward] {
 /* INTRO / HOME PAGE */
 
 #intro {
-	height: 500px;
 	background:
 		linear-gradient(
 			rgba($tertiary-color, 0.15),
