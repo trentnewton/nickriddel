@@ -30,6 +30,10 @@ if (!function_exists('nickriddel_scripts')) :
     //wp_deregister_script('wc-cart');
     wp_deregister_script('prettyPhoto');
 
+    // do not load the file: wp-embed.min.js (used since WordPress 4.4)
+
+    wp_dequeue_script( 'wp-embed' );
+
     // CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
     wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', array(), '2.1.4', true );
 
