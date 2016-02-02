@@ -26,11 +26,11 @@ global $post, $woocommerce, $product;
 	<?php
 		if ( has_post_thumbnail() ) {
 
-			$image_title = esc_attr( get_the_title( get_post_thumbnail_id() ) );
-			$image_link  = wp_get_attachment_url( get_post_thumbnail_id() );
-			$image       = get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
-				'title' => $image_title
-				) );
+			$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
+			$image_link    = wp_get_attachment_url( get_post_thumbnail_id() );
+			$image         = get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
+				'title'	=> get_the_title( get_post_thumbnail_id() )
+			) );
 
 			$attachment_count = count( $product->get_gallery_attachment_ids() );
 

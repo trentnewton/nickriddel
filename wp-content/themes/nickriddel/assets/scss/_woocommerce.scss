@@ -1404,13 +1404,25 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 					font-weight: bold;
 				}
 			}
+
 			li {
 				margin: 0;
 				padding: rem-calc(4 0 4 22);
-				text-indent: -22px;
+				text-indent: rem-calc(-22);
 				list-style: none outside;
+
+				input {
+					margin: 3px 0.5ex;
+				}
+
+				label {
+					display: inline;
+				}
+
 			}
+
 		}
+
 	}
 
 	p {
@@ -1781,7 +1793,9 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 /**
  * Checkout
  */
-.woocommerce-checkout {
+.woocommerce-checkout,
+#add_payment_method {
+
 	.checkout {
 		h3 {
 			&#ship-to-different-address {
@@ -1996,7 +2010,8 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 .woocommerce-password-strength {
 	text-align: center;
 	font-weight: 600;
-	padding: rem-calc(3 0 3 0);
+	padding: 3px .5em;
+	font-size: 1em;
 
 	&.strong {
 		background-color: #c1e1b9;
@@ -2018,6 +2033,11 @@ $highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highl
 		border-color: #ffc733;
 	}
 
+}
+
+.woocommerce-password-hint {
+	margin: .5em 0 0 0;
+	display: block;
 }
 
 /* added to get around variation image flicker issue */
