@@ -9,10 +9,10 @@
  * as little as possible, but it does happen. When this occurs the version of the template file will.
  * be bumped and the readme will list any important changes.
  *
- * @see 	    http://docs.woothemes.com/document/template-structure/
+ * @see 	http://docs.woothemes.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.5.0
+ * @version 2.5.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,7 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $order = wc_get_order( $order_id );
 
-$show_purchase_note = $order->has_status( apply_filters( 'woocommerce_purchase_note_order_statuses', array( 'completed', 'processing' ) ) );
+$show_purchase_note    = $order->has_status( apply_filters( 'woocommerce_purchase_note_order_statuses', array( 'completed', 'processing' ) ) );
+$show_customer_details = is_user_logged_in() && $order->get_user_id() === get_current_user_id();
 ?>
 <h2 class="fade-in-right"><?php _e( 'Order Details', 'woocommerce' ); ?></h2>
 <table class="shop_table order_details fade-in-left">
@@ -62,4 +63,6 @@ $show_purchase_note = $order->has_status( apply_filters( 'woocommerce_purchase_n
 
 <?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 
-<?php wc_get_template( 'order/order-details-customer.php', array( 'order' =>  $order ) ); ?>
+<?php if ( $show_customer_details ) : ?>
+	<?php wc_get_template( 'order/order-details-customer.php', array( 'order' =>  $order ) ); ?>
+<?php endif; ?>
