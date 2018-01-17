@@ -19,7 +19,7 @@ if (!function_exists('nickriddel_scripts')) :
     // Deregister the jquery version bundled with wordpress
     wp_deregister_script( 'jquery' );
     //wp_deregister_script('wc-add-to-cart');
-    wp_deregister_script('jquery-blockui');
+    // wp_deregister_script('jquery-blockui');
     wp_deregister_script('jquery-payment');
     wp_deregister_script('jquery-cookie');
     //wp_deregister_script('select2');
