@@ -13,7 +13,9 @@ $.payment.cards = cards = [
   # specific patterns than their credit-card equivalents.
   {
     type: 'visaelectron'
-    pattern: /^4(026|17500|405|508|844|91[37])/
+    patterns: [
+      4026, 417500, 4405, 4508, 4844, 4913, 4917
+    ]
     format: defaultFormat
     length: [16]
     cvcLength: [3]
@@ -21,7 +23,9 @@ $.payment.cards = cards = [
   }
   {
     type: 'maestro'
-    pattern: /^(5(018|0[23]|[68])|6(39|7))/
+    patterns: [
+      5018, 502, 503, 506, 56, 58, 639, 6220, 67
+    ]
     format: defaultFormat
     length: [12..19]
     cvcLength: [3]
@@ -29,7 +33,7 @@ $.payment.cards = cards = [
   }
   {
     type: 'forbrugsforeningen'
-    pattern: /^600/
+    patterns: [600]
     format: defaultFormat
     length: [16]
     cvcLength: [3]
@@ -37,7 +41,7 @@ $.payment.cards = cards = [
   }
   {
     type: 'dankort'
-    pattern: /^5019/
+    patterns: [5019]
     format: defaultFormat
     length: [16]
     cvcLength: [3]
@@ -46,7 +50,7 @@ $.payment.cards = cards = [
   # Credit cards
   {
     type: 'visa'
-    pattern: /^4/
+    patterns: [4]
     format: defaultFormat
     length: [13, 16]
     cvcLength: [3]
@@ -54,7 +58,10 @@ $.payment.cards = cards = [
   }
   {
     type: 'mastercard'
-    pattern: /^(5[1-5]|2[2-7])/
+    patterns: [
+      51, 52, 53, 54, 55,
+      22, 23, 24, 25, 26, 27
+    ]
     format: defaultFormat
     length: [16]
     cvcLength: [3]
@@ -62,7 +69,7 @@ $.payment.cards = cards = [
   }
   {
     type: 'amex'
-    pattern: /^3[47]/
+    patterns: [34, 37]
     format: /(\d{1,4})(\d{1,6})?(\d{1,5})?/
     length: [15]
     cvcLength: [3..4]
@@ -70,7 +77,7 @@ $.payment.cards = cards = [
   }
   {
     type: 'dinersclub'
-    pattern: /^3[0689]/
+    patterns: [30, 36, 38, 39]
     format: /(\d{1,4})(\d{1,6})?(\d{1,4})?/
     length: [14]
     cvcLength: [3]
@@ -78,7 +85,7 @@ $.payment.cards = cards = [
   }
   {
     type: 'discover'
-    pattern: /^6([045]|22)/
+    patterns: [60, 64, 65, 622]
     format: defaultFormat
     length: [16]
     cvcLength: [3]
@@ -86,7 +93,7 @@ $.payment.cards = cards = [
   }
   {
     type: 'unionpay'
-    pattern: /^(62|88)/
+    patterns: [62, 88]
     format: defaultFormat
     length: [16..19]
     cvcLength: [3]
@@ -94,7 +101,7 @@ $.payment.cards = cards = [
   }
   {
     type: 'jcb'
-    pattern: /^35/
+    patterns: [35]
     format: defaultFormat
     length: [16]
     cvcLength: [3]
@@ -104,7 +111,10 @@ $.payment.cards = cards = [
 
 cardFromNumber = (num) ->
   num = (num + '').replace(/\D/g, '')
-  return card for card in cards when card.pattern.test(num)
+  for card in cards
+    for pattern in card.patterns
+      p = pattern + ''
+      return card if num.substr(0, p.length) == p
 
 cardFromType = (type) ->
   return card for card in cards when card.type is type
@@ -147,6 +157,31 @@ safeVal = (value, $target) ->
   $target.val(value)
   if cursor != null && $target.is(":focus")
     cursor = value.length if cursor is last.length
+
+    # This hack looks for scenarios where we are changing an input's value such
+    # that "X| " is replaced with " |X" (where "|" is the cursor). In those
+    # scenarios, we want " X|".
+    #
+    # For example:
+    # 1. Input field has value "4444| "
+    # 2. User types "1"
+    # 3. Input field has value "44441| "
+    # 4. Reformatter changes it to "4444 |1"
+    # 5. By incrementing the cursor, we make it "4444 1|"
+    #
+    # This is awful, and ideally doesn't go here, but given the current design
+    # of the system there does not appear to be a better solution.
+    #
+    # Note that we can't just detect when the cursor-1 is " ", because that
+    # would incorrectly increment the cursor when backspacing, e.g. pressing
+    # backspace in this scenario: "4444 1|234 5".
+    if last != value
+      prevPair = last[cursor-1..cursor]
+      currPair = value[cursor-1..cursor]
+      digit = value[cursor]
+      cursor = cursor + 1 if /\d/.test(digit) and
+        prevPair == "#{digit} " and currPair == " #{digit}"
+
     $target.prop('selectionStart', cursor)
     $target.prop('selectionEnd', cursor)
 
@@ -159,18 +194,19 @@ replaceFullWidthChars = (str = '') ->
   value = ''
   chars = str.split('')
 
-  for char in chars
-    idx = fullWidth.indexOf(char)
-    char = halfWidth[idx] if idx > -1
-    value += char
+  # Avoid using reserved word `char`
+  for chr in chars
+    idx = fullWidth.indexOf(chr)
+    chr = halfWidth[idx] if idx > -1
+    value += chr
 
   value
 
 # Format Numeric
 
 reFormatNumeric = (e) ->
+  $target = $(e.currentTarget)
   setTimeout ->
-    $target = $(e.currentTarget)
     value   = $target.val()
     value   = replaceFullWidthChars(value)
     value   = value.replace(/\D/g, '')
@@ -179,8 +215,8 @@ reFormatNumeric = (e) ->
 # Format Card Number
 
 reFormatCardNumber = (e) ->
+  $target = $(e.currentTarget)
   setTimeout ->
-    $target = $(e.currentTarget)
     value   = $target.val()
     value   = replaceFullWidthChars(value)
     value   = $.payment.formatCardNumber(value)
@@ -243,8 +279,8 @@ formatBackCardNumber = (e) ->
 # Format Expiry
 
 reFormatExpiry = (e) ->
+  $target = $(e.currentTarget)
   setTimeout ->
-    $target = $(e.currentTarget)
     value   = $target.val()
     value   = replaceFullWidthChars(value)
     value   = $.payment.formatExpiry(value)
@@ -264,7 +300,15 @@ formatExpiry = (e) ->
 
   else if /^\d\d$/.test(val)
     e.preventDefault()
-    setTimeout -> $target.val("#{val} / ")
+    setTimeout ->
+      # Split for months where we have the second digit > 2 (past 12) and turn
+      # that into (m1)(m2) => 0(m1) / (m2)
+      m1 = parseInt(val[0], 10)
+      m2 = parseInt(val[1], 10)
+      if m2 > 2 and m1 != 0
+        $target.val("0#{m1} / #{m2}")
+      else
+        $target.val("#{val} / ")
 
 formatForwardExpiry = (e) ->
   digit = String.fromCharCode(e.which)
@@ -305,8 +349,8 @@ formatBackExpiry = (e) ->
 # Format CVC
 
 reFormatCVC = (e) ->
+  $target = $(e.currentTarget)
   setTimeout ->
-    $target = $(e.currentTarget)
     value   = $target.val()
     value   = replaceFullWidthChars(value)
     value   = value.replace(/\D/g, '')[0...4]

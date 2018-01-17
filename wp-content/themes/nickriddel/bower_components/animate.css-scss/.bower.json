@@ -27,7 +27,7 @@
     "tag": "3.1.0",
     "commit": "3dbba630655cae2f78c956582668fcd3ddb8d263"
   },
-  "_source": "git://github.com/Igosuki/animate.scss.git",
+  "_source": "https://github.com/Igosuki/animate.scss.git",
   "_target": "~3.1.0",
   "_originalSource": "animate.css-scss"
 }

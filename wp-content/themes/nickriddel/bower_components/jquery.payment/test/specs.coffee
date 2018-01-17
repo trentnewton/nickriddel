@@ -224,6 +224,7 @@ describe 'jquery.payment', ->
       assert.equal($.payment.cardType('4917300800000000'), 'visaelectron')
 
       assert.equal($.payment.cardType('6759649826438453'), 'maestro')
+      assert.equal($.payment.cardType('6220180012340012345'), 'maestro')
 
       assert.equal($.payment.cardType('6007220000000004'), 'forbrugsforeningen')
 
@@ -270,7 +271,7 @@ describe 'jquery.payment', ->
     it 'should support new card types', ->
       wing = {
         type: 'wing'
-        pattern: /^501818/
+        patterns: [501818]
         length: [16]
         luhn: false
       }
@@ -283,9 +284,9 @@ describe 'jquery.payment', ->
   describe 'formatCardNumber', ->
     it 'should format cc number correctly', (done) ->
       $number = $('<input type=text>').payment('formatCardNumber')
-      $number.val('4242')
+      $number.val('4242').prop('selectionStart', 4)
 
-      e = $.Event('keypress');
+      e = $.Event('keypress')
       e.which = 52 # '4'
       $number.trigger(e)
 
@@ -295,9 +296,9 @@ describe 'jquery.payment', ->
 
     it 'should format amex cc number correctly', (done) ->
       $number = $('<input type=text>').payment('formatCardNumber')
-      $number.val('3782')
+      $number.val('3782').prop('selectionStart', 4)
 
-      e = $.Event('keypress');
+      e = $.Event('keypress')
       e.which = 56 # '8'
       $number.trigger(e)
 
@@ -309,7 +310,7 @@ describe 'jquery.payment', ->
       $number = $('<input type=text>').payment('formatCardNumber')
       $number.val('\uff14\uff12\uff14\uff12')
 
-      e = $.Event('input');
+      e = $.Event('input')
       $number.trigger(e)
 
       setTimeout ->
@@ -321,7 +322,7 @@ describe 'jquery.payment', ->
       $expiry = $('<input type=text>').payment('formatCardExpiry')
       $expiry.val('')
 
-      e = $.Event('keypress');
+      e = $.Event('keypress')
       e.which = 52 # '4'
       $expiry.trigger(e)
 
@@ -333,7 +334,7 @@ describe 'jquery.payment', ->
       $expiry = $('<input type=text>').payment('formatCardExpiry')
       $expiry.val('1')
 
-      e = $.Event('keypress');
+      e = $.Event('keypress')
       e.which = 47 # '/'
       $expiry.trigger(e)
 
@@ -345,7 +346,7 @@ describe 'jquery.payment', ->
       $expiry = $('<input type=text>').payment('formatCardExpiry')
       $expiry.val('1')
 
-      e = $.Event('keypress');
+      e = $.Event('keypress')
       e.which = 100 # 'd'
       $expiry.trigger(e)
 
@@ -354,12 +355,36 @@ describe 'jquery.payment', ->
         done()
 
     it 'should format full-width expiry correctly', (done) ->
-      $number = $('<input type=text>').payment('formatCardExpiry')
-      $number.val('\uff10\uff18\uff11\uff15')
+      $expiry = $('<input type=text>').payment('formatCardExpiry')
+      $expiry.val('\uff10\uff18\uff11\uff15')
 
-      e = $.Event('input');
-      $number.trigger(e)
+      e = $.Event('input')
+      $expiry.trigger(e)
 
       setTimeout ->
-        assert.equal $number.val(), '08 / 15'
+        assert.equal $expiry.val(), '08 / 15'
+        done()
+
+    it 'should format month expiry correctly when val is past 12', (done) ->
+      $expiry = $('<input type=text>').payment('formatCardExpiry')
+      $expiry.val('1')
+
+      e = $.Event('keypress')
+      e.which = 52 # '4'
+      $expiry.trigger(e)
+
+      setTimeout ->
+        assert.equal $expiry.val(), '01 / 4'
+        done()
+
+    it 'should format month expiry corrrectly for 0 followed by single digit > 2', (done) ->
+      $expiry = $('<input type=text>').payment('formatCardExpiry')
+      $expiry.val('0')
+
+      e = $.Event('keypress')
+      e.which = 53 # '5'
+      $expiry.trigger(e)
+
+      setTimeout ->
+        assert.equal $expiry.val(), '05 / '
         done()

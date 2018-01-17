@@ -2,7 +2,17 @@
 
 A general purpose library for building credit card forms, validating inputs and formatting numbers.
 
-For example, you can make an input act like a credit card field (with number formatting and length restriction):
+## Project status
+
+We consider `jQuery.payment` to be feature complete. We continue to use it in production, and we will happily accept bug reports and pull requests fixing those bugs, but we will not be adding new features or modifying the project for new frameworks or build systems.
+
+### Why?
+
+The library was born in a different age, and we think it has served tremendously, but it is fundamentally doing too many things. Complecting DOM element manipulation, input masking, card formatting, and cursor positioning makes it difficult to test and modify. An ideal version of this library would separate the independent components and make the internal logic functional.
+
+## Usage
+
+You can make an input act like a credit card field (with number formatting and length restriction):
 
 ``` javascript
 $('input.cc-num').payment('formatCardNumber');
@@ -167,7 +177,7 @@ $.payment.cardType('4242 4242 4242 4242'); //=> 'visa'
 Parses a credit card expiry in the form of MM/YYYY, returning an object containing the `month` and `year`. Shorthand years, such as `13` are also supported (and converted into the longhand, e.g. `2013`).
 
 ``` javascript
-$.payment.cardExpiryVal('03 / 2025'); //=> {month: 3: year: 2025}
+$.payment.cardExpiryVal('03 / 2025'); //=> {month: 3, year: 2025}
 $.payment.cardExpiryVal('05 / 04'); //=> {month: 5, year: 2004}
 $('input.cc-exp').payment('cardExpiryVal') //=> {month: 4, year: 2020}
 ```
@@ -182,9 +192,11 @@ Array of objects that describe valid card types. Each object should contain the 
 {
   // Card type, as returned by $.payment.cardType.
   type: 'mastercard',
-  // Regex used to identify the card type. For the best experience, this should be
-  // the shortest pattern that can guarantee the card is of a particular type.
-  pattern: /^5[0-5]/,
+  // Array of prefixes used to identify the card type.
+  patterns: [
+      51, 52, 53, 54, 55,
+      22, 23, 24, 25, 26, 27
+  ],
   // Array of valid card number lengths.
   length: [16],
   // Array of valid card CVC lengths.
@@ -196,7 +208,7 @@ Array of objects that describe valid card types. Each object should contain the 
 }
 ```
 
-When identifying a card type, the array is traversed in order until the card number matches a `pattern`. For this reason, patterns with higher specificity should appear towards the beginning of the array.
+When identifying a card type, the array is traversed in order until the card number matches a prefix in `patterns`. For this reason, patterns with higher specificity should appear towards the beginning of the array.
 
 ## Example
 
