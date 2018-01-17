@@ -400,6 +400,7 @@
             color: scale-color($input-border-color, $lightness: 47%, $saturation: -5%);
         }
 
+        &[data-selected=true],
         &[aria-selected=true] {
             background-color: $gainsboro;
         }
@@ -444,6 +445,7 @@
 
     }
 
+    .select2-results__option--highlighted[data-selected],
     .select2-results__option--highlighted[aria-selected] {
         background-color: $input-focus-border-color;
         color: $white;
@@ -704,6 +706,7 @@
 
     }
 
+    .select2-results__option--highlighted[data-selected],
     .select2-results__option--highlighted[aria-selected] {
         background-color: #3875d7;
         color: $white;

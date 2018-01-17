@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.0.0
+ * @version 3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,9 +28,14 @@ wc_print_notices();
 	<?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?>
 </p>
 
-<?php do_action( 'woocommerce_cart_is_empty' ); ?>
+<?php
 
-<?php if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
+/**
+ * @hooked wc_empty_cart_message - 10
+ */
+do_action( 'woocommerce_cart_is_empty' );
+
+if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 	<p class="return-to-shop fade-in-up">
 		<a class="button wc-backward" href="<?php echo home_url(); ?>/">
 			<?php _e( 'Return', 'woocommerce' ) ?>
