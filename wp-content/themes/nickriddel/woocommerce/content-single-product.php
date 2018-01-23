@@ -69,12 +69,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				do_action( 'woocommerce_single_product_summary' );
 			?>
 			<div class="row double-space-top fade-in-up">
-				<div class="small-6 columns">
+				<div class="small-4 columns">
 					<a href="<?php echo get_post_meta($post->ID, 'itunes_link', true); ?>" target="_blank" class="button order-button drop <?php echo get_post_meta($post->ID, 'itunes_disabled', true); ?>">
 				  		<?php echo get_post_meta($post->ID, 'itunes_name', true); ?>
 					</a>
 				</div>
-				<div class="small-6 columns">
+				<div class="small-4 columns">
+					<a href="<?php echo get_post_meta($post->ID, 'spotify_link', true); ?>" target="_blank" class="button order-button spotify <?php echo get_post_meta($post->ID, 'spotify_disabled', true); ?>">
+				  		<?php echo get_post_meta($post->ID, 'spotify_name', true); ?>
+					</a>
+				</div>
+				<div class="small-4 columns">
 				  <a href="#" data-reveal-id="open-order" class="button order-button spin">
 				  	<?php echo get_post_meta($post->ID, 'order_cd', true); ?>
 				  </a>
