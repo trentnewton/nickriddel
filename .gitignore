@@ -28,6 +28,15 @@ wp-content/plugins/wordpress-database-reset
 wp-content/plugins/theme-check
 wp-content/plugins/hello.php
 wp-content/plugins/index.php
+wp-content/ewww
+wp-content/wflogs
+wp-content/plugins/duplicator
+wp-content/plugins/ewww-image-optimizer
+wp-content/plugins/min-max-quantities-for-woocommerce
+wp-content/plugins/woocommerce-direct-checkout
+wp-content/plugins/wordfence
+wp-content/plugins/wordpress-seo
+wp-content/plugins/wp-statistics
 wp-content/themes/twentyfifteen
 wp-content/themes/twentyfourteen
 wp-content/themes/twentythirteen
@@ -35,4 +44,9 @@ wp-content/themes/index.php
 
 database.sql
 
-wp-content/themes/nickriddel/nickriddel.sublime-workspace
+*.sublime-project
+
+*.sublime-workspace
+wp-content/object-cache.php
+
+wp-content/object-cache.php.apc
