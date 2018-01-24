@@ -34,6 +34,10 @@ if (!function_exists('nickriddel_scripts')) :
 
     wp_dequeue_script( 'wp-embed' );
 
+    wp_dequeue_style('wp-blocks');
+
+    wp_deregister_style('wp-blocks');
+
     // CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
     wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', array(), '2.1.4', true );
 
@@ -61,7 +65,7 @@ function mgt_dequeue_stylesandscripts() {
     if ( class_exists( 'woocommerce' ) ) {
         wp_dequeue_style( 'select2' );
         wp_deregister_style( 'select2' );
-    } 
+    }
 }
 
 ?>

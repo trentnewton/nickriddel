@@ -32,6 +32,7 @@ wp-content/ewww
 wp-content/wflogs
 wp-content/plugins/duplicator
 wp-content/plugins/ewww-image-optimizer
+wp-content/plugins/gutenberg
 wp-content/plugins/min-max-quantities-for-woocommerce
 wp-content/plugins/woocommerce-direct-checkout
 wp-content/plugins/wordfence

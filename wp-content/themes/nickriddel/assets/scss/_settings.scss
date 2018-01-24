@@ -206,9 +206,9 @@ $header-font-family: $font-family-serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 $header-font-color: $body-font-color;
-// $header-line-height: 1.4;
+$header-line-height: 1.2;
 $header-top-margin: 0;
-// $header-bottom-margin: .5rem;
+$header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
@@ -266,10 +266,10 @@ $subheader-font-color: $header-font-color;
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
-// $hr-border-width: 1px;
+$hr-border-width: 2px;
 // $hr-border-style: solid;
-// $hr-border-color: $gainsboro;
-// $hr-margin: rem-calc(20);
+$hr-border-color: $primary-color;
+$hr-margin: rem-calc(30);
 
 // We use these to style lists
 // $list-font-family: $paragraph-font-family;
@@ -287,8 +287,8 @@ $subheader-font-color: $header-font-color;
 
 // We use these to style blockquotes
 // $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-// $blockquote-padding: rem-calc(9 20 0 19);
-// $blockquote-border: 1px solid $gainsboro;
+$blockquote-padding: rem-calc(30);
+$blockquote-border: 1px solid $primary-color;
 // $blockquote-cite-font-size: rem-calc(13);
 // $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
@@ -932,7 +932,7 @@ $input-prefix-font-color: $primary-color;
 // Hide controls on small
 // $orbit-nav-hide-for-small: true;
 // $orbit-bullet-hide-for-small: true;
-// $orbit-timer-hide-for-small: true; 
+// $orbit-timer-hide-for-small: true;
 
 // 20. Pagination
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -946,14 +946,14 @@ $input-prefix-font-color: $primary-color;
 // We use these to set the list-item properties
 // $pagination-li-float: $default-float;
 // $pagination-li-height: rem-calc(24);
-// $pagination-li-font-color: $jet;
+$pagination-li-font-color: $primary-color;
 // $pagination-li-font-size: rem-calc(14);
 // $pagination-li-margin: rem-calc(5);
 
 // We use these for the pagination anchor links
 // $pagination-link-pad: rem-calc(1 10 1);
-// $pagination-link-font-color: $aluminum;
-// $pagination-link-active-bg: scale-color($white, $lightness: -10%);
+$pagination-link-font-color: scale-color($header-font-color, $lightness: 50%);
+$pagination-link-active-bg: $primary-color;
 
 // We use these for disabled anchor links
 // $pagination-link-unavailable-cursor: default;
