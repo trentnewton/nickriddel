@@ -1005,11 +1005,24 @@ body .entry-content {
 
 }
 
-ul.pagination li:hover a,
-ul.pagination li a:focus,
-ul.pagination li:hover button,
-ul.pagination li button:focus {
-	color: $white;
+ul.pagination {
+
+	li {
+
+		&:hover a,
+		a:focus,
+		&:hover button,
+		button:focus {
+			color: $white;
+		}
+
+		span {
+			display: block;
+			padding: $pagination-link-pad;
+		}
+
+	}
+
 }
 
 .blog-header-index {
